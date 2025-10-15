@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">ECLSS Telemetry Visualization</title>
+  <desc id="desc">Graph card showing telemetry curves and gauges.</desc>
+  <rect width="320" height="200" rx="24" fill="#022c22" />
+  <rect x="24" y="24" width="272" height="64" rx="16" fill="#064e3b" />
+  <path fill="none" stroke="#22d3ee" stroke-width="6" stroke-linecap="round" d="M40 76l24-32 32 28 32-20 28 24 32-36 40 40" />
+  <g fill="#0f172a">
+    <circle cx="72" cy="144" r="28" fill="#0f172a" />
+    <circle cx="160" cy="144" r="28" fill="#0f172a" />
+    <circle cx="248" cy="144" r="28" fill="#0f172a" />
+  </g>
+  <g fill="#22d3ee">
+    <path d="M72 124a20 20 0 1 1 0 40" />
+    <path d="M160 124a20 20 0 1 1 0 40" />
+    <path d="M248 124a20 20 0 1 1 0 40" />
+  </g>
+</svg>
