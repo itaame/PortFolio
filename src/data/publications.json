@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Mission Control Architectures for Analog Spaceflight Campaigns",
+    "venue": "International Astronautical Congress",
+    "year": 2024,
+    "authors": "I. Taame, L. Schneider, M. Rossi",
+    "abstract": "Presents a modular MCC stack leveraging XTCE-driven telemetry ingestion and automated anomaly triage tailored for analog astronaut campaigns.",
+    "url": "https://doi.org/10.1000/iac.2024.12345",
+    "bibtex": "@inproceedings{taame2024mcc, title={Mission Control Architectures for Analog Spaceflight Campaigns}, author={Taame, Ilyasse and Schneider, Lara and Rossi, Marco}, booktitle={International Astronautical Congress}, year={2024}}"
+  },
+  {
+    "title": "Dynamic Telemetry Prioritization for Life Support Systems",
+    "venue": "SpaceOps Conference",
+    "year": 2023,
+    "authors": "I. Taame, J. Müller",
+    "abstract": "Demonstrates CCSDS urgent APID routing with telemetry prioritization achieving sixfold latency reduction for life support alerts.",
+    "url": "https://doi.org/10.1000/spaceops.2023.54321",
+    "bibtex": "@inproceedings{taame2023telemetry, title={Dynamic Telemetry Prioritization for Life Support Systems}, author={Taame, Ilyasse and Müller, Julia}, booktitle={SpaceOps Conference}, year={2023}}"
+  },
+  {
+    "title": "Edge-to-Orbit Health Monitoring for Analog Habitats",
+    "venue": "IEEE Aerospace Conference",
+    "year": 2022,
+    "authors": "I. Taame, S. Alvarez, P. Becker",
+    "abstract": "Describes a hybrid hardware/software stack enabling high-rate biomedical telemetry with integrity validation and predictive analytics.",
+    "url": "https://doi.org/10.1000/ieeeaero.2022.67890",
+    "bibtex": "@inproceedings{taame2022edge, title={Edge-to-Orbit Health Monitoring for Analog Habitats}, author={Taame, Ilyasse and Alvarez, Sofia and Becker, Paul}, booktitle={IEEE Aerospace Conference}, year={2022}}"
+  }
+]

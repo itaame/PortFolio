@@ -1,0 +1,38 @@
+[
+  {
+    "role": "Head of Mission Control Center (Analog Mission)",
+    "organization": "ASCLEPIOS",
+    "location": "Payerne, Switzerland",
+    "start": "2025",
+    "end": "2025",
+    "achievements": [
+      "Directed 18-console MCC supporting 120+ EVA hours across 2-week mission",
+      "Rolled out anomaly response playbooks reducing response time by 45%",
+      "Integrated telemetry dashboards consumed by remote science teams"
+    ]
+  },
+  {
+    "role": "Embedded Systems & GUI — Semester Thesis",
+    "organization": "Technical University of Munich",
+    "location": "Munich, Germany",
+    "start": "2024",
+    "end": "2024",
+    "achievements": [
+      "Automated flight readiness test scripts for embedded avionics harness",
+      "Generated XTCE-based reports across 30+ subsystem test cases",
+      "Built MSFS visualization streaming simulated vehicle state via UDP"
+    ]
+  },
+  {
+    "role": "Research Student — Telemetry & XTCE",
+    "organization": "DLR / TUM Collaborative Lab",
+    "location": "Oberpfaffenhofen, Germany",
+    "start": "2023",
+    "end": "2024",
+    "achievements": [
+      "Designed XTCE schemas for cross-mission telemetry compatibility",
+      "Exposed flight operations personnel to failure operations procedures",
+      "Implemented trending analytics and anomaly response workflows"
+    ]
+  }
+]

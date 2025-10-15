@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">Mission Control Console</title>
+  <desc id="desc">Stylized console showing mission control waveform panels.</desc>
+  <rect width="320" height="200" rx="24" fill="#0f172a" />
+  <g fill="none" stroke-linecap="round" stroke-width="6">
+    <path stroke="#38bdf8" d="M32 80h32l16 24 24-48 16 32h48" />
+    <path stroke="#facc15" d="M32 124h48l16-20 32 40 24-28 32 12h48" />
+  </g>
+  <rect x="32" y="24" width="256" height="24" rx="12" fill="#1e293b" />
+  <circle cx="60" cy="36" r="6" fill="#f87171" />
+  <circle cx="88" cy="36" r="6" fill="#4ade80" />
+  <circle cx="116" cy="36" r="6" fill="#38bdf8" />
+</svg>

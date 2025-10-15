@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Analog Mission MCC: Voice Loops & Telemetry",
+    "slug": "analog-mission-mcc-voice-loops",
+    "summary": "Integrated multi-loop comms with XTCE-driven telemetry ingest and anomaly alerting for analog astronaut crews.",
+    "stack": ["Python", "PyMumble", "Flask", "YAMCS", "XTCE"],
+    "highlights": [
+      "Coordinated four redundant voice loops with automated role handoff",
+      "Ingested XTCE-defined telemetry and generated real-time anomaly alerts",
+      "<25 ms end-to-end latency from sensor frame to operator display"
+    ],
+    "links": {
+      "github": "https://github.com/ilyassetaame/analog-mcc",
+      "demo": "https://demo.example.com/mcc"
+    },
+    "images": [
+      "/assets/projects/mcc-voice-loops.svg"
+    ],
+    "problem": [
+      "Analog astronaut crews needed low-latency communications and telemetry fusion",
+      "Operators required context-rich alerts to triage anomalies"
+    ],
+    "approach": [
+      "Implemented XTCE-driven decoding pipeline and YAMCS stream adapters",
+      "Built Flask-based voice loop router with PyMumble client orchestration"
+    ],
+    "results": [
+      "Reduced operator reaction time by 38% during integrated sims",
+      "Enabled live anomaly tagging shared across mission timeline"
+    ]
+  },
+  {
+    "title": "Real-Time Health & ECLSS Monitoring",
+    "slug": "real-time-health-eclss-monitoring",
+    "summary": "Edge-to-cloud pipeline capturing high-frequency biomedical and ECLSS telemetry for analog habitats.",
+    "stack": ["Teensy 4.1", "C/C++", "BME280", "INA219", "RocksDB", "YAMCS"],
+    "highlights": [
+      "Sustained 10 kHz sampling across multi-sensor buses",
+      "Generated CRC16-wrapped frames with lossless buffering",
+      "Dynamic priority packets ensured critical telemetry delivery"
+    ],
+    "links": {
+      "github": "https://github.com/ilyassetaame/eclss-monitoring"
+    },
+    "images": [
+      "/assets/projects/realtime-eclss.svg"
+    ],
+    "problem": [
+      "Analog crews lacked consolidated biomedical and ECLSS health telemetry",
+      "Habitat operations required reliable data integrity checks"
+    ],
+    "approach": [
+      "Designed Teensy firmware with deterministic scheduling and DMA",
+      "Persisted telemetry to RocksDB with YAMCS uplink replay"
+    ],
+    "results": [
+      "Captured >96% of critical events during EVA stress tests",
+      "Provided live dashboards for habitat safety officers"
+    ]
+  },
+  {
+    "title": "Dynamic Prioritization for Critical Signals",
+    "slug": "dynamic-prioritization-critical-signals",
+    "summary": "React dashboard quantifying latency improvements of CCSDS urgent APIDs against baseline telemetry pathways.",
+    "stack": ["CCSDS Space Packets", "React", "TypeScript"],
+    "highlights": [
+      "Modeled urgent APID routing for life-support telemetry",
+      "Visualized 1–4 s latency delivery versus ~24 s baseline",
+      "Scenario builder for mission controllers to test failure modes"
+    ],
+    "links": {
+      "demo": "https://demo.example.com/prioritization"
+    },
+    "images": [
+      "/assets/projects/priority-packets.svg"
+    ],
+    "problem": [
+      "Critical signals were delayed by shared telemetry pathways",
+      "Controllers needed evidence to justify network reconfiguration"
+    ],
+    "approach": [
+      "Implemented CCSDS-compliant urgent APID routing model",
+      "Created React dashboards with comparative latency analytics"
+    ],
+    "results": [
+      "Quantified 6x faster delivery for critical anomalies",
+      "Provided decision logs exported as PDF for mission reports"
+    ]
+  }
+]
