@@ -47,14 +47,29 @@ export default function About() {
         description="Discover Ilyasse Taame’s path across mission control, telemetry engineering, and human spaceflight preparation."
         path="/about"
       />
-      <header className="space-y-4">
+      <header className="space-y-6">
         <Tag variant="accent">About</Tag>
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Meet Ilyasse Taame</h1>
-        <p className="max-w-3xl text-base text-slate-600 dark:text-slate-300">
-          Spacecraft operations enthusiast with a dual-degree M.Sc. focused on avionics and human spaceflight, fascinated by how disciplined
-          procedures and resilient software keep crews safe. I thrive in real-time environments where telemetry, human factors, and mission
-          objectives intersect.
-        </p>
+        <div className="grid gap-8 lg:grid-cols-[1.6fr,1fr] lg:items-center">
+          <div className="space-y-4">
+            <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+              Meet Ilyasse Taame
+            </h1>
+            <p className="max-w-3xl text-base text-slate-600 dark:text-slate-300">
+              Spacecraft operations enthusiast with a dual-degree M.Sc. focused on avionics and human spaceflight, fascinated by how
+              disciplined procedures and resilient software keep crews safe. I thrive in real-time environments where telemetry, human
+              factors, and mission objectives intersect.
+            </p>
+          </div>
+          <figure className="relative mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
+            <img
+              src={profile.avatar}
+              alt="Ilyasse Taame in mission control"
+              loading="lazy"
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <figcaption className="sr-only">Portrait of Ilyasse Taame</figcaption>
+          </figure>
+        </div>
       </header>
 
       <section className="grid gap-10 lg:grid-cols-[1.4fr,1fr] lg:items-start">
@@ -64,15 +79,48 @@ export default function About() {
             multidisciplinary teams as Head of MCC during ASCLEPIOS or architecting telemetry pipelines for life-support systems, I focus on
             clarity under pressure and data that operators can trust.
           </p>
+          <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
+            <img
+              src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80"
+              alt="Mission control consoles with glowing telemetry displays"
+              loading="lazy"
+              className="h-60 w-full object-cover"
+            />
+            <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
+              A favorite mission control vantage point where telemetry, voice loops, and team coordination intersect.
+            </figcaption>
+          </figure>
           <p>
             I’m equally at home writing procedures as building the tools that execute them. From XTCE modelling and CCSDS packet routing to
             developing voice-loop software with openVoCS logic, I enjoy translating complex requirements into systems that feel intuitive to the
             people who rely on them in critical moments.
           </p>
+          <figure className="grid gap-2 rounded-3xl border border-slate-200 bg-white/80 p-4 shadow-soft md:grid-cols-[1.1fr,1fr] dark:border-slate-800 dark:bg-slate-900/70">
+            <img
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+              alt="Engineer working with avionics hardware in a lab"
+              loading="lazy"
+              className="h-48 w-full rounded-2xl object-cover"
+            />
+            <figcaption className="text-sm text-slate-500 dark:text-slate-400">
+              Lab time—tuning avionics benches and validating telemetry pipelines before they reach mission rehearsal.
+            </figcaption>
+          </figure>
           <p>
             Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
             mentoring students entering the space-operations world. Curiosity and rigorous preparation are the constants that keep me mission-ready.
           </p>
+          <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
+            <img
+              src="https://images.unsplash.com/photo-1529921735733-56c2d1d57b48?auto=format&fit=crop&w=1200&q=80"
+              alt="Astronaut training aircraft flying over clouds"
+              loading="lazy"
+              className="h-56 w-full object-cover"
+            />
+            <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
+              High-altitude campaigns remind me that curiosity and preparation fuel every successful mission.
+            </figcaption>
+          </figure>
         </div>
         <aside className="space-y-4 rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-soft backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
           <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Quick facts</h2>
