@@ -62,7 +62,7 @@ export default function About() {
           </div>
           <figure className="relative mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
             <img
-              src={profile.avatar}
+              src="/assets/projects/about5.JPG"
               alt="Ilyasse Taame in mission control"
               loading="lazy"
               className="aspect-[4/5] w-full object-cover"
@@ -81,7 +81,7 @@ export default function About() {
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
             <img
-              src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80"
+              src="/assets/projects/about1.PNG"
               alt="Mission control consoles with glowing telemetry displays"
               loading="lazy"
               className="h-60 w-full object-cover"
@@ -95,16 +95,29 @@ export default function About() {
             developing voice-loop software with openVoCS logic, I enjoy translating complex requirements into systems that feel intuitive to the
             people who rely on them in critical moments.
           </p>
-          <figure className="grid gap-2 rounded-3xl border border-slate-200 bg-white/80 p-4 shadow-soft md:grid-cols-[1.1fr,1fr] dark:border-slate-800 dark:bg-slate-900/70">
+          <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
             <img
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
-              alt="Engineer working with avionics hardware in a lab"
+              src="/assets/projects/about2.JPG"
+              alt="Mission control consoles with glowing telemetry displays"
               loading="lazy"
-              className="h-48 w-full rounded-2xl object-cover"
+              className="h-60 w-full object-cover"
             />
-            <figcaption className="text-sm text-slate-500 dark:text-slate-400">
-              Lab time—tuning avionics benches and validating telemetry pipelines before they reach mission rehearsal.
+            <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
+              A favorite mission control vantage point where telemetry, voice loops, and team coordination intersect.
             </figcaption>
+          </figure>
+          <p>
+            Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
+            mentoring students entering the space-operations world. Curiosity and rigorous preparation are the constants that keep me mission-ready.
+          </p>
+          <figure className="relative mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
+            <img
+              src="/assets/projects/about4.JPG"
+              alt="Ilyasse Taame in mission control"
+              loading="lazy"
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <figcaption className="sr-only">Portrait of Ilyasse Taame</figcaption>
           </figure>
           <p>
             Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
@@ -112,7 +125,7 @@ export default function About() {
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
             <img
-              src="https://images.unsplash.com/photo-1529921735733-56c2d1d57b48?auto=format&fit=crop&w=1200&q=80"
+              src="/assets/projects/about3.JPG"
               alt="Astronaut training aircraft flying over clouds"
               loading="lazy"
               className="h-56 w-full object-cover"
