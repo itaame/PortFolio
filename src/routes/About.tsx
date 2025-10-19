@@ -110,15 +110,6 @@ export default function About() {
             Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
             mentoring students entering the space-operations world. Curiosity and rigorous preparation are the constants that keep me mission-ready.
           </p>
-          <figure className="relative mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
-            <img
-              src="/assets/projects/about4.JPG"
-              alt="Ilyasse Taame in mission control"
-              loading="lazy"
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <figcaption className="sr-only">Portrait of Ilyasse Taame</figcaption>
-          </figure>
           <p>
             Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
             mentoring students entering the space-operations world. Curiosity and rigorous preparation are the constants that keep me mission-ready.
@@ -136,6 +127,15 @@ export default function About() {
           </figure>
         </div>
         <aside className="space-y-4 rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-soft backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
+          <figure className="mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
+            <img
+              src="/assets/projects/about4.JPG"
+              alt="Ilyasse Taame in mission control"
+              loading="lazy"
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <figcaption className="sr-only">Portrait of Ilyasse Taame</figcaption>
+          </figure>
           <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Quick facts</h2>
           <dl className="space-y-3 text-sm">
             {quickFacts.map((fact) => (
