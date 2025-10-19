@@ -1,29 +1,20 @@
 [
   {
-    "title": "Mission Control Architectures for Analog Spaceflight Campaigns",
+    "title": "Human-centered protocol innovations for biomedical and environmental monitoring in human spaceflight",
     "venue": "International Astronautical Congress",
-    "year": 2024,
-    "authors": "I. Taame, L. Schneider, M. Rossi",
-    "abstract": "Presents a modular MCC stack leveraging XTCE-driven telemetry ingestion and automated anomaly triage tailored for analog astronaut campaigns.",
-    "url": "https://doi.org/10.1000/iac.2024.12345",
-    "bibtex": "@inproceedings{taame2024mcc, title={Mission Control Architectures for Analog Spaceflight Campaigns}, author={Taame, Ilyasse and Schneider, Lara and Rossi, Marco}, booktitle={International Astronautical Congress}, year={2024}}"
+    "year": 2025,
+    "authors": "I. Taame, A. Belkhair",
+    "abstract": "As space agencies prepare for sustained lunar habitation and Mars exploration, there is a growing need for human-focused technologies that ensure astronaut health and safety. Current space communication protocols, like those based on the Consultative Committee for Space Data Systems (CCSDS), were originally designed for robotic missions and do not fully support the complex needs of human spaceflight. These protocols must evolve to address challenges such as real-time biomedical monitoring, adaptive data prioritization for astronaut health, and the secure transmission of sensitive health data in environments where human actors are central to mission success. This paper proposes a modification to the CCSDS Space Packet Protocol and CFDP to enhance their support for human spaceflight missions by focusing on the integration of real-time environmental and biomedical monitoring. Specifically, it introduces: Dynamic prioritization of health data based on the astronaut’s health status and mission phase, ensuring that critical medical data receives the necessary bandwidth during emergencies or when mission parameters change. A hybrid encryption framework to securely transmit sensitive biomedical telemetry with minimal latency, addressing both data integrity and crew privacy without compromising mission communications. Predictive models that leverage edge computing and AI-based anomaly detection to manage long communication delays in Earth-Mars communication, allowing for real-time health insights even during periods of limited contact. These protocol extensions will be tested during the 16-day ASCLEPIOS V analog mission planned for late July, where astronauts will be monitored in a controlled environment featuring continuous vital sign tracking, radiation sensors, and environmental composition monitoring. A central component of the study will be a qualitative analysis of how analog astronauts and mission control flight controllers interact with the system during medical emergencies and routine operations. The study will assess the usability of the system, efficiency of data prioritization, and the integration of encrypted health data into routine operations, including how flight controllers adapt to the evolving health status of crew members. Through this approach, we aim to generate empirical evidence to inform the next generation of human spaceflight communications. By ensuring that CCSDS protocols evolve to address the unique demands of human missions, this research will contribute to the long-term success and sustainability of deep space exploration, where human health and effective communication systems are paramount.",
+    "url": "https://iafastro.directory/iac/paper/id/100593/abstract-pdf/IAC-25,B3,7,5,x100593.brief.pdf?2025-03-26.12:59:45",
+    "bibtex": "@inproceedings{inproceedings,author = {Taame, Ilyasse and Belkhair, Abir},year = {2025},month = {10},pages = {},title = {Human-centered protocol innovations for biomedical and environmental monitoring in human spaceflight}"
   },
   {
-    "title": "Dynamic Telemetry Prioritization for Life Support Systems",
-    "venue": "SpaceOps Conference",
-    "year": 2023,
-    "authors": "I. Taame, J. Müller",
-    "abstract": "Demonstrates CCSDS urgent APID routing with telemetry prioritization achieving sixfold latency reduction for life support alerts.",
-    "url": "https://doi.org/10.1000/spaceops.2023.54321",
-    "bibtex": "@inproceedings{taame2023telemetry, title={Dynamic Telemetry Prioritization for Life Support Systems}, author={Taame, Ilyasse and Müller, Julia}, booktitle={SpaceOps Conference}, year={2023}}"
-  },
-  {
-    "title": "Edge-to-Orbit Health Monitoring for Analog Habitats",
-    "venue": "IEEE Aerospace Conference",
-    "year": 2022,
-    "authors": "I. Taame, S. Alvarez, P. Becker",
-    "abstract": "Describes a hybrid hardware/software stack enabling high-rate biomedical telemetry with integrity validation and predictive analytics.",
-    "url": "https://doi.org/10.1000/ieeeaero.2022.67890",
-    "bibtex": "@inproceedings{taame2022edge, title={Edge-to-Orbit Health Monitoring for Analog Habitats}, author={Taame, Ilyasse and Alvarez, Sofia and Becker, Paul}, booktitle={IEEE Aerospace Conference}, year={2022}}"
+    "title": "Testing A Magnetohydrodynamic Photobioreactor Concept in Microgravity - the MVIPER Experiment",
+    "venue": "International Astronautical Congress",
+    "year": 2025,
+    "authors": "Narra, Jayanth; Kura, Matthias; Volk, Lucien; Salman, Lina; Schäfer, Fabio; Martin-Carrilero, Pablo; Metten, Luisa; Ziesera, Alexander; Barwaguia, Siwar; Obersteinera, Katharina; Tomasika, Jona; Laub, Philipp; Taame, Ilyasse; Detrell, Gisela; Romero-Calvo, Álvaro",
+    "abstract": "With ambitions to send astronauts on missions of increasing duration and distance from Earth, biological and hybrid life support systems based on microalgae  are  currently being researched for air revitalization,  food  production, and wastewater treatment. So far, the cultivation of microalgae in microgravity conditions in space has been conducted in closed-loop photobioreactors, requiring mechanical pumps to drive a membrane phase separation system. However, these  designs suffer  from  high  mechanical stress on  the algae,  biofilm buildup, and  limitations with regard  to  the diffusion  coefficient.  In  addition,  both membranes  and  pumps  require  spare parts,  further  limiting  the long-term feasibility of these reactor concepts. One proposed alternative is to eliminate the use of pumps and membranes by using a magnetohydrodynamic drive (MHD).  This  paper  investigates  this  concept  through  MVIPER,  the  Magnetohydrodynamic  Vortex-Inducing Photobioreactor Experiment, a parabolic flight experiment designed for the ESA Academy Experiments Programme 24/25 to test a novel photobioreactor concept for microalgae cultivation in space. For the experiment, Magnetic fields acting on the algae-compatible nutrient solution are used to create a vortex in a small-scale circular reactor through the Lorentz force. In this geometry, a centrifugal force is created by the vortex, driving liquid to the outside and bubbles to the inside of  the reactor, where a liquid-gas  boundary is formed. The  experiment is aimed at demonstrating this technology by observing the flow characteristics and phase separation capability of the vortex in microgravity. The conceptual design and trade-offs are presented alongside preliminary simulations and ground test results. Overall, this magnetohydrodynamic photobioreactor design aims to remove mechanical pumps and the membrane phase separation system, relying solely on magnetohydrodynamic pumping and phase separation by vortex, increasing the overall reliability of microalgae  photobioreactors for  use  in future  long-term biological and hybrid  life support systems.",
+    "url": "https://www.researchgate.net/publication/395991546_Testing_A_Magnetohydrodynamic_Photobioreactor_Concept_in_Microgravity_-_the_MVIPER_Experiment",
+    "bibtex": "@inproceedings{inproceedings,author = {Narra, Jayanth and Kura, Matthias and Volk, Lucien and Salman, Lina and Schäfer, Fabio and Martin-Carrilero, Pablo and Metten, Luisa and Ziesera, Alexander and Barwaguia, Siwar and Obersteinera, Katharina and Tomasika, Jona and Laub, Philipp and Taame, Ilyasse and Detrell, Gisela and Romero-Calvo, Álvaro},year = {2025},month = {10},pages = {},title = {Testing A Magnetohydrodynamic Photobioreactor Concept in Microgravity - the MVIPER Experiment}"
   }
 ]

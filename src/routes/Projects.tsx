@@ -45,6 +45,11 @@ export default function Projects() {
                     Demo →
                   </a>
                 )}
+                {project.links.source && (
+                  <a className="text-accent hover:text-accent/80" href={project.links.source} target="_blank" rel="noreferrer">
+                    Source →
+                  </a>
+                )}
                 <Link to={`/projects/${project.slug}`} className="text-accent hover:text-accent/80">
                   View project →
                 </Link>

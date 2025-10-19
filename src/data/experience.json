@@ -1,38 +1,62 @@
 [
   {
-    "role": "Head of Mission Control Center (Analog Mission)",
-    "organization": "ASCLEPIOS",
-    "location": "Payerne, Switzerland",
-    "start": "2025",
-    "end": "2025",
+    "role": "Master Thesis",
+    "organization": "Human Spaceflight Technology - TUM",
+    "location": "Ottobrunn, Germany",
+    "start": "Feb 2025",
+    "end": "Aug 2025",
     "achievements": [
-      "Directed 18-console MCC supporting 120+ EVA hours across 2-week mission",
-      "Rolled out anomaly response playbooks reducing response time by 45%",
-      "Integrated telemetry dashboards consumed by remote science teams"
+      "Built a low-latency telemetry pipeline that ingests ECLSS housekeeping data and wearable biomedical streams into a flight controller’s dashboard, mirroring ISS-style console practice.",
+      "The system, based on CCSDS Space Packet Protocol, achieved an overall PL < 1 %, 98.152 % of the 16-day mission time with zero-Loss, and an average latency of 21.24 ms."
     ]
   },
   {
-    "role": "Embedded Systems & GUI — Semester Thesis",
-    "organization": "Technical University of Munich",
-    "location": "Munich, Germany",
-    "start": "2024",
-    "end": "2024",
+    "role": "Head of Mission Control Center",
+    "organization": "Asclepios - EPFL",
+    "location": "Lausanne, Switzerland",
+    "start": "Jul 2024",
+    "end": "Aug 2025",
     "achievements": [
-      "Automated flight readiness test scripts for embedded avionics harness",
-      "Generated XTCE-based reports across 30+ subsystem test cases",
-      "Built MSFS visualization streaming simulated vehicle state via UDP"
+      "Led the design and deployment of mission control software using YAMCS, enhancing telemetry data handling and command stacks.",
+      "Ensured compliance with CCSDS protocols, improving operational efficiency and data integrity.",
+      "Managed critical data from ECLSS and biomedical sensors, supporting medical and science teams.",
+	"Developed voice-communication software implementing DLR’s Voice Communication Subsystem (openVoCS) loop logic for mission-control operations.",
+	"Developed comprehensive FOPs and protocols for mission control operations, ensuring high standards of performance."
+
     ]
   },
   {
-    "role": "Research Student — Telemetry & XTCE",
-    "organization": "DLR / TUM Collaborative Lab",
-    "location": "Oberpfaffenhofen, Germany",
-    "start": "2023",
-    "end": "2024",
+    "role": "Embedded-Systems & GUI",
+    "organization": "ESA Academy",
+    "location": "Bordeaux, France",
+    "start": "Jul 2025",
+    "end": "Sep 2025",
     "achievements": [
-      "Designed XTCE schemas for cross-mission telemetry compatibility",
-      "Exposed flight operations personnel to failure operations procedures",
-      "Implemented trending analytics and anomaly response workflows"
+      "Designed and built a real-time flight-ops GUI that fuses 15 sensor channels telemetry, FLIR video, and live g-level classification into a single dashboard used on the A310 Novespace Zero-G aircraft.",
+      "Conducted flight-readiness tests and produced detailed test reports validating the system performance."
+    ]
+  },
+  {
+    "role": "Semester Thesis",
+    "organization": "Institute of Flight System Dynamics - TUM",
+    "location": "Garching, Germany",
+    "start": "Jan 2024",
+    "end": "Jul 2024",
+    "achievements": [
+      "Development of a HiL Simulation Environment for the avionic systems of the Airbus Urban Mobility Airship using the TechSat ADS2 HiL PC.",
+      "Integrated the ADS2 with a dedicated visualization PC running Microsoft Flight Simulator (MSFS) via UDP messages transmitting aircraft state according to the flight dynamic model.",
+	"Successful HiL Test of the Ground Control Station communications with the Airship."
+    ]
+  },
+  {
+    "role": "Avionics Intern",
+    "organization": "Centre National d’Études Spatiales (CNES)",
+    "location": "Paris, France",
+    "start": "May 2022",
+    "end": "Aug 2022",
+    "achievements": [
+      "Designed and validated avionics systems for propulsion and control in sounding rockets.",
+      "Developed connectivity between mission control and launch pad using MQTT protocol, contributing to the nominal launch of SERA IV rocket from Kiruna, Sweden."
     ]
   }
 ]

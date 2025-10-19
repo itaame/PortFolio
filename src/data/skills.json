@@ -1,11 +1,21 @@
 [
   "Python",
-  "React",
-  "TypeScript",
+  "C++",
+  "CCSDS",
+  "ECSS",
   "YAMCS",
-  "CCSDS / XTCE",
-  "Telemetry Processing",
+  "GMV tools (EFN, GCACK, CLOG)",
+  "TT&C",
   "Mission Control",
   "Git",
-  "Linux"
+  "Linux",
+  "Catia V5",
+  "SolidWorks",
+  "Altium Designer",
+  "KiCad",
+  "Proteus",
+  "MATLAB & Simulink",
+  "Cameo SysML",
+  "DOORS",
+  "Polarion"
 ]

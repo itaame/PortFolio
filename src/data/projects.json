@@ -1,90 +1,214 @@
 [
   {
-    "title": "Analog Mission MCC: Voice Loops & Telemetry",
+    "title": "Voice Loops Communication Software",
     "slug": "analog-mission-mcc-voice-loops",
-    "summary": "Integrated multi-loop comms with XTCE-driven telemetry ingest and anomaly alerting for analog astronaut crews.",
-    "stack": ["Python", "PyMumble", "Flask", "YAMCS", "XTCE"],
+    "summary": "Modelled after the voice loop structure used in the Columbus Control Centre and in flight control centres around the world, this software allows users to listen in to up to three voice loops simultaneously. Volume can be adjusted on each loop, and they can each be toggled while speaking. Certain loops have restricted permissions to comply with operational procedures - for example, all flight controllers can listen into the Space to Ground loop, but only the CapCom, Flight Director, and astronauts in the base can speak in this loop. This new software both improved realism to match industry standards and simplified Asclepios MCC communications. Additionally, the MCC communications software implemented an artificial six-second round-trip communications delay to simulate the latency in communications between the Moon and the Earth. While this has been done previously in NASA or ESA-led analogue projects such as NEEMO and PANGAEA-X/Analog-1, Asclepios is the first non-space-agency analogue mission to implement it.",
+    "stack": ["Python", "PyMumble", "Flask", "HTML"],
     "highlights": [
-      "Coordinated four redundant voice loops with automated role handoff",
-      "Ingested XTCE-defined telemetry and generated real-time anomaly alerts",
-      "<25 ms end-to-end latency from sensor frame to operator display"
+      "Enabled Voice Loop Communication between Flight Controllers and Analog Crew",
+      "Enabled artificial voice delay",
+      "Increased situational awareness inside the MCC"
     ],
     "links": {
-      "github": "https://github.com/ilyassetaame/analog-mcc",
-      "demo": "https://demo.example.com/mcc"
+      "github": "https://github.com/itaame/MC-COMMS3"
     },
     "images": [
-      "/assets/projects/mcc-voice-loops.svg"
+      "/assets/projects/mcc-voice-loops3.JPEG",
+      "/assets/projects/mcc-voice-loops.png"
     ],
     "problem": [
-      "Analog astronaut crews needed low-latency communications and telemetry fusion",
-      "Operators required context-rich alerts to triage anomalies"
+      "Analog astronaut crews and Flight Controllers needed low-latency communications",
+      "Operators were required to listen to multiple channels",
+      "The mission required the implementation of artificial voice delay"
     ],
     "approach": [
-      "Implemented XTCE-driven decoding pipeline and YAMCS stream adapters",
+      "Studied the voice communication system in Col-CC and around the world",
       "Built Flask-based voice loop router with PyMumble client orchestration"
     ],
     "results": [
-      "Reduced operator reaction time by 38% during integrated sims",
-      "Enabled live anomaly tagging shared across mission timeline"
+      "Increased Flight Controller's situational awareness",
+      "Enabled Artificial voice delay"
     ]
   },
   {
-    "title": "Real-Time Health & ECLSS Monitoring",
-    "slug": "real-time-health-eclss-monitoring",
-    "summary": "Edge-to-cloud pipeline capturing high-frequency biomedical and ECLSS telemetry for analog habitats.",
-    "stack": ["Teensy 4.1", "C/C++", "BME280", "INA219", "RocksDB", "YAMCS"],
+    "title": "Real-Time Flight-Ops GUI",
+    "slug": "real-time-gui",
+    "summary": "Magnetohydrodynamic Vortex‑Inducing Photobioreactor Experiment (MVIPER) tests a novel way to mix and de‑gas algal photobioreactors in weightlessness. Instead of pumps and membranes, it uses a magnetohydrodynamic (MHD) drive: electrodes impose an electric field through a conductive growth medium while permanent magnets supply a perpendicular magnetic field. The resulting Lorentz force spins the liquid into a vortex that should drive liquid outward and force gas bubbles inward for easy separation, potentially making future life‑support bioreactors simpler, lighter, and more reliable in space. The experiment was tested during the 87ᵗʰ ESA–Novespace parabolic‑flight campaign in September 2025. The GUI fuses 15 sensor channels telemetry, FLIR video, and live g-level classification into a single dashboard used on the A310 Novespace Zero-G aircraft.",
+    "stack": ["Teensy 4.1", "C/C++", "Python", "FLIR", "CCSDS", "RocksDB", "YAMCS"],
     "highlights": [
       "Sustained 10 kHz sampling across multi-sensor buses",
       "Generated CRC16-wrapped frames with lossless buffering",
       "Dynamic priority packets ensured critical telemetry delivery"
     ],
     "links": {
-      "github": "https://github.com/ilyassetaame/eclss-monitoring"
     },
     "images": [
-      "/assets/projects/realtime-eclss.svg"
+      "/assets/projects/MVIPER1.png",
+      "/assets/projects/MVIPER2.gif",
+      "/assets/projects/MVIPER3.jpg"
     ],
     "problem": [
-      "Analog crews lacked consolidated biomedical and ECLSS health telemetry",
-      "Habitat operations required reliable data integrity checks"
+      "The Microgravity lasts for 22 seconds in each parabola, Operators require high situational awareness during this time window",
+      "The GUI should allow the operators to spot current spikes, hydrogen leaks ..."
     ],
     "approach": [
-      "Designed Teensy firmware with deterministic scheduling and DMA",
-      "Persisted telemetry to RocksDB with YAMCS uplink replay"
+      "Designed a reception server and GUI capable of plotting prolonged periods of sensor data",
+      "Implemented live video feed of the chamber scientific camera and two other operational cameras",
+      "Persisted sensor readings to a local database"
     ],
     "results": [
-      "Captured >96% of critical events during EVA stress tests",
-      "Provided live dashboards for habitat safety officers"
+      "Xxxxx",
+      "Xxxxxx"
     ]
   },
   {
-    "title": "Dynamic Prioritization for Critical Signals",
-    "slug": "dynamic-prioritization-critical-signals",
-    "summary": "React dashboard quantifying latency improvements of CCSDS urgent APIDs against baseline telemetry pathways.",
-    "stack": ["CCSDS Space Packets", "React", "TypeScript"],
+    "title": "YAMCS based Monitoring and Control System (MCS) Software",
+    "slug": "mcs",
+    "summary": "In order to align with industry standards, this MCS was build using Space Application's open source software YAMCS. This all in one tool enables Flight Planning, reception and decoding of CCSDS Space Packet Protocol, following a mission specific MIB that follows the CCSDS XTCE Protocol. The Software is an easy to use Web based tool that allows Flight Controllers to view and edit the Flight Plan, monitor critical ECLSS and Biomedical data, and conduct real-time trend analysis. The software also allows the Flight Control Team to send commands, log events, and local data storage.",
+    "stack": ["CCSDS", "ECSS", "YAMCS", "yaml", "Python"],
     "highlights": [
-      "Modeled urgent APID routing for life-support telemetry",
-      "Visualized 1–4 s latency delivery versus ~24 s baseline",
-      "Scenario builder for mission controllers to test failure modes"
+      "Build a Monitoring and Control System aligned with industry standards",
+      "Enabled efficient flight Planing",
+      "Enabled Telemetry and Command following CCSDS Protocols"
     ],
     "links": {
-      "demo": "https://demo.example.com/prioritization"
+      "demo": "https://asclepios-mcc.org/"
     },
     "images": [
-      "/assets/projects/priority-packets.svg"
+      "/assets/projects/MCS2.png",
+      "/assets/projects/mcc-voice-loops.png"
     ],
     "problem": [
-      "Critical signals were delayed by shared telemetry pathways",
-      "Controllers needed evidence to justify network reconfiguration"
+      "The analog Mission lacked an industry-like MCS",
+      "The FCT used multiple tools to achieve mission goals"
     ],
     "approach": [
-      "Implemented CCSDS-compliant urgent APID routing model",
-      "Created React dashboards with comparative latency analytics"
+      "Implemented CCSDS-compliant MCS based on YAMCS",
+      "Trained the FCT on multiple instances on the MCS"
     ],
     "results": [
-      "Quantified 6x faster delivery for critical anomalies",
-      "Provided decision logs exported as PDF for mission reports"
+      "The FCT detected critical anomalies faster",
+      "The analog mission is now more aligned with the Space industry standards"
+    ]
+  },
+  {
+    "title": "Hardware-In-The-Loop Simulation Environment for the Avionics Systems of an Airship",
+    "slug": "airship",
+    "summary": "A HiL Simulation Environment for the avionic systems of the Airbus Urban Mobility Airship using the TechSat ADS2 HiL PC was setup. The ADS2 was interfaced with a Visualization PC using the internal TCP-UDP I/O Device where a UDP message containing the Aircraft state according to the flight dynamic model is sent to Microsoft Flight Simulator. Thanks to this environment, a successful HiL Test of the Ground Control Station communications with the Airship was conducted",
+    "stack": ["HIL", "UDP", "MATLAB", "RS232", "RS485", "CAN", "A429", "RocksDB"],
+    "highlights": [
+      "Built a full HIL testing environment for an Airships Avionic systems ",
+      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
+      "Successfully tested the Ground Control Station communications with the Airship"
+    ],
+    "links": {
+      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+    },
+    "images": [
+      "/assets/projects/airship1.jpeg",
+      "/assets/projects/mcc-voice-loops.png"
+    ],
+    "problem": [
+      "The analog Mission lacked an industry-like MCS",
+      "The FCT used multiple tools to achieve mission goals"
+    ],
+    "approach": [
+      "Implemented CCSDS-compliant MCS based on YAMCS",
+      "Trained the FCT on multiple instances on the MCS"
+    ],
+    "results": [
+      "The FCT detected critical anomalies faster",
+      "The analog mission is now more aligned with the Space industry standards"
+    ]
+  },
+  {
+    "title": "Avionics systems for propulsion and control in sounding rockets",
+    "slug": "cnes",
+    "summary": "Developed the first prototype of a modular acquisition and control board, designed for flexibility and sensor scalability. The system supports up to nine including very low-voltage (35 mV–100 mV), 10–12 V, 0–5 V, and digital inputs. It also features control capability for four solenoid valves, operating in multiple modes (in-phase, opposite-phase, or mixed). Extensive breadboard simulations and validation tests confirmed full functionality and compliance with system requirements. Deliverables included the complete Altium project (schematic and PCB layout), Bill of Materials (BOM), and the embedded code for CAN communication and USB sensor interfacing.",
+    "stack": ["Altium", "BOM", "CAN", "PCB"],
+    "highlights": [
+      "Built a full HIL testing environment for an Airships Avionic systems ",
+      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
+      "Successfully tested the Ground Control Station communications with the Airship"
+    ],
+    "links": {
+      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+    },
+    "images": [
+      "/assets/projects/cnes1.png",
+      "/assets/projects/cnes2.png"
+    ],
+    "problem": [
+      "The analog Mission lacked an industry-like MCS",
+      "The FCT used multiple tools to achieve mission goals"
+    ],
+    "approach": [
+      "Implemented CCSDS-compliant MCS based on YAMCS",
+      "Trained the FCT on multiple instances on the MCS"
+    ],
+    "results": [
+      "The FCT detected critical anomalies faster",
+      "The analog mission is now more aligned with the Space industry standards"
+    ]
+  },
+  {
+    "title": "Flight Testing Lab",
+    "slug": "ftl",
+    "summary": "Developed a comprehensive understanding of Flight Testing Techniques, with particular emphasis on Flight Performance, Stability, and Control. The work encompassed the full process of preparing, executing, and analysing flight tests in a controlled simulator environment. This included the study of operational requirements, aviation regulations, and the specific responsibilities of the flight test crew. Detailed Flight Test Cards (FTCs) were prepared for each exercise, accompanied by the setup and use of flight test instrumentation and data acquisition systems. During a two-hour demonstration flight using a DA-42 simulator, twelve distinct test procedures were executed — including take-off performance, phugoid motion, and Dutch roll assessments. The campaign concluded with in-depth analysis and interpretation of flight test data, resulting in a strong technical foundation in both theoretical and applied flight testing.",
+    "stack": ["HIL", "UDP", "MATLAB", "RS232", "RS485", "CAN", "A429", "RocksDB"],
+    "highlights": [
+      "Built a full HIL testing environment for an Airships Avionic systems ",
+      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
+      "Successfully tested the Ground Control Station communications with the Airship"
+    ],
+    "links": {
+      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+    },
+    "images": [
+      "/assets/projects/ftl1.jpg",
+      "/assets/projects/ftl2.png"
+    ],
+    "problem": [
+      "The analog Mission lacked an industry-like MCS",
+      "The FCT used multiple tools to achieve mission goals"
+    ],
+    "approach": [
+      "Implemented CCSDS-compliant MCS based on YAMCS",
+      "Trained the FCT on multiple instances on the MCS"
+    ],
+    "results": [
+      "The FCT detected critical anomalies faster",
+      "The analog mission is now more aligned with the Space industry standards"
+    ]
+  },
+  {
+    "title": "Flight Control Systems Lab",
+    "slug": "fcsl",
+    "summary": "Acquired an in-depth understanding of aerospace development processes, avionics systems, and certification standards, with a particular focus on DO-178C and DO-331. The work concentrated on the functional implementation of flight control algorithms, evaluation of flight dynamics, and development of flight control software modules. Gained practical expertise in data transmission using the CAN-based ARINC825 standard and investigated the integration of redundant electromechanical actuators (EMAs) within modern flight control architectures. Implemented and tested flight control strategies for a demonstrator aircraft (DA-42 simulator) through both Processor-In-The-Loop (PIL) and Hardware-In-The-Loop (HIL) simulations. Additionally, developed strong analytical insight into the factors affecting flying and handling qualities, along with the ability to evaluate Pilot-In-The-Loop interactions from both theoretical and experimental perspectives.",
+    "stack": ["MIL", "HIL", "PIL", "MATLAB", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
+    "highlights": [
+      "Built a full HIL testing environment for an Airships Avionic systems ",
+      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
+      "Successfully tested the Ground Control Station communications with the Airship"
+    ],
+    "links": {
+      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+    },
+    "images": [
+      "/assets/projects/fcsl1.png",
+      "/assets/projects/fcsl2.png"
+    ],
+    "problem": [
+      "The analog Mission lacked an industry-like MCS",
+      "The FCT used multiple tools to achieve mission goals"
+    ],
+    "approach": [
+      "Implemented CCSDS-compliant MCS based on YAMCS",
+      "Trained the FCT on multiple instances on the MCS"
+    ],
+    "results": [
+      "The FCT detected critical anomalies faster",
+      "The analog mission is now more aligned with the Space industry standards"
     ]
   }
 ]

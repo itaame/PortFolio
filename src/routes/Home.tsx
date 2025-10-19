@@ -16,7 +16,7 @@ export default function Home() {
       <SEO path="/" />
       <section className="grid gap-10 lg:grid-cols-[1.2fr,1fr] lg:items-center">
         <div className="space-y-6">
-          <Tag variant="accent">Spacecraft Operations</Tag>
+          <Tag variant="accent">Short Profile</Tag>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
             {profile.name}
           </h1>

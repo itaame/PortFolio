@@ -25,9 +25,7 @@ export default function Publications() {
       <SEO title="Publications" description="Conference papers and articles covering mission control architectures and telemetry research." path="/publications" />
       <header className="space-y-4 text-center">
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Publications</h1>
-        <p className="mx-auto max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-          Peer-reviewed work across IAC, SpaceOps, and IEEE Aerospace focused on telemetry, XTCE, and operational analytics.
-        </p>
+
       </header>
       <div className="grid gap-4 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900/80 sm:grid-cols-2">
         <label className="flex flex-col text-sm font-semibold text-slate-600 dark:text-slate-300">

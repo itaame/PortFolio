@@ -80,6 +80,11 @@ export default function Project() {
             Launch demo →
           </a>
         )}
+        {project.links.source && (
+          <a className="text-accent hover:text-accent/80" href={project.links.source} target="_blank" rel="noreferrer">
+            Source →
+          </a>
+        )}
         <Link to="/projects" className="text-accent hover:text-accent/80">
           Back to all projects →
         </Link>

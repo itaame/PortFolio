@@ -10,7 +10,7 @@ export default function Contact() {
       <header className="space-y-4 text-center">
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Contact</h1>
         <p className="mx-auto max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-          Let’s design telemetry and operations tooling that keeps crews safe. Drop a note and I’ll reply within two mission days.
+          Let’s design Space and Ground Operations that keeps crews, Spacecraft, and mission safe. Drop a note and I’ll reply as soon as possible.
         </p>
       </header>
       <div className="grid gap-8 lg:grid-cols-[1fr,0.8fr]">
@@ -36,12 +36,12 @@ export default function Contact() {
             </label>
             <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
               Email
-              <Input name="email" type="email" required autoComplete="email" placeholder="mission@control.com" />
+              <Input name="email" type="email" required autoComplete="email" placeholder="name@mail.com" />
             </label>
           </div>
           <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
             Message
-            <Textarea name="message" rows={6} required placeholder="Share context, timelines, and mission goals." />
+            <Textarea name="message" rows={6} required placeholder="Share context, timelines, and goals." />
           </label>
           <p className="text-xs text-slate-500 dark:text-slate-400">
             Form is wired for Netlify deployments and falls back to Formspree. You’ll receive a confirmation when delivered.
@@ -54,7 +54,7 @@ export default function Contact() {
           </div>
         </form>
         <aside className="space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-xl font-semibold text-slate-900 dark:text-white">Mission details</h2>
+          <h2 className="text-xl font-semibold text-slate-900 dark:text-white">Details</h2>
           <dl className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
             <div>
               <dt className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Location</dt>
