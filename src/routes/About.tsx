@@ -110,10 +110,6 @@ export default function About() {
             Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
             mentoring students entering the space-operations world. Curiosity and rigorous preparation are the constants that keep me mission-ready.
           </p>
-          <p>
-            Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
-            mentoring students entering the space-operations world. Curiosity and rigorous preparation are the constants that keep me mission-ready.
-          </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
             <img
               src="/assets/projects/about3.JPG"
@@ -126,8 +122,27 @@ export default function About() {
             </figcaption>
           </figure>
         </div>
-        <aside className="space-y-4 rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-soft backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
-          <figure className="mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
+        <div className="space-y-6">
+          <aside className="space-y-4 rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-soft backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Quick facts</h2>
+            <dl className="space-y-3 text-sm">
+              {quickFacts.map((fact) => (
+                <div key={fact.label} className="space-y-1">
+                  <dt className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{fact.label}</dt>
+                  <dd className="font-semibold text-slate-900 dark:text-white">
+                    {fact.href ? (
+                      <a href={fact.href} className="hover:text-accent">
+                        {fact.value}
+                      </a>
+                    ) : (
+                      fact.value
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
+          <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
             <img
               src="/assets/projects/about4.JPG"
               alt="Ilyasse Taame in mission control"
@@ -136,24 +151,7 @@ export default function About() {
             />
             <figcaption className="sr-only">Portrait of Ilyasse Taame</figcaption>
           </figure>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Quick facts</h2>
-          <dl className="space-y-3 text-sm">
-            {quickFacts.map((fact) => (
-              <div key={fact.label} className="space-y-1">
-                <dt className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{fact.label}</dt>
-                <dd className="font-semibold text-slate-900 dark:text-white">
-                  {fact.href ? (
-                    <a href={fact.href} className="hover:text-accent">
-                      {fact.value}
-                    </a>
-                  ) : (
-                    fact.value
-                  )}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </aside>
+        </div>
       </section>
 
       <section aria-labelledby="focus-title" className="space-y-8">
