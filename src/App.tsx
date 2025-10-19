@@ -2,11 +2,21 @@ import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { loadContact, loadExperience, loadHome, loadNotFound, loadProject, loadProjects, loadPublications } from './routes/lazy';
+import {
+  loadAbout,
+  loadContact,
+  loadExperience,
+  loadHome,
+  loadNotFound,
+  loadProject,
+  loadProjects,
+  loadPublications
+} from './routes/lazy';
 import { usePlausibleAnalytics, usePageview } from './lib/analytics';
 import profile from './data/profile.json';
 
 const Home = lazy(loadHome);
+const About = lazy(loadAbout);
 const Projects = lazy(loadProjects);
 const Project = lazy(loadProject);
 const Experience = lazy(loadExperience);
@@ -68,6 +78,7 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:slug" element={<Project />} />
             <Route path="/experience" element={<Experience />} />

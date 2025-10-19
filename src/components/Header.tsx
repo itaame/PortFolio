@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom';
 import socials from '../data/socials.json';
 import ThemeToggle from './ThemeToggle';
 import { prefetchRoute } from '../lib/utils';
-import { loadContact, loadExperience, loadProjects, loadPublications } from '../routes/lazy';
+import { loadAbout, loadContact, loadExperience, loadProjects, loadPublications } from '../routes/lazy';
 
 const navItems = [
   { to: '/', label: 'Home', prefetch: undefined },
+  { to: '/about', label: 'About', prefetch: () => prefetchRoute('about', loadAbout) },
   { to: '/projects', label: 'Projects', prefetch: () => prefetchRoute('projects', loadProjects) },
   { to: '/experience', label: 'Experience', prefetch: () => prefetchRoute('experience', loadExperience) },
   { to: '/publications', label: 'Publications', prefetch: () => prefetchRoute('publications', loadPublications) },
@@ -25,6 +26,7 @@ interface HeaderProps {
 
 export default function Header({ theme, onThemeChange, profile }: HeaderProps) {
   const [open, setOpen] = useState(false);
+  const contactNavItem = navItems.find((item) => item.to === '/contact');
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-slate-200 bg-white/70 backdrop-blur dark:border-slate-800 dark:bg-slate-950/70">
@@ -63,8 +65,8 @@ export default function Header({ theme, onThemeChange, profile }: HeaderProps) {
           <NavLink
             to="/contact"
             className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            onMouseEnter={navItems[4].prefetch}
-            onFocus={navItems[4].prefetch}
+            onMouseEnter={contactNavItem?.prefetch}
+            onFocus={contactNavItem?.prefetch}
           >
             Work together
           </NavLink>
