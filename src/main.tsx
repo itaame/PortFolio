@@ -17,6 +17,7 @@ const basename = (() => {
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
+      const basename = import.meta.env.BASE_URL;
       <BrowserRouter basename={basename}>
         <App />
       </BrowserRouter>
