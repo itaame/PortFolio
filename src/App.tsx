@@ -14,6 +14,7 @@ import {
 } from './routes/lazy';
 import { usePlausibleAnalytics, usePageview } from './lib/analytics';
 import profile from './data/profile.json';
+import { withBase } from './lib/withBase';
 
 const Home = lazy(loadHome);
 const About = lazy(loadAbout);
@@ -61,13 +62,20 @@ function App() {
   const location = useLocation();
 
   const year = useMemo(() => new Date().getFullYear(), []);
+  const profileWithBase = useMemo(
+    () => ({
+      ...profile,
+      avatar: withBase(profile.avatar)
+    }),
+    []
+  );
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100">
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <Header theme={theme} onThemeChange={setTheme} profile={profile} />
+      <Header theme={theme} onThemeChange={setTheme} profile={profileWithBase} />
       <main id="main" className="mx-auto max-w-6xl px-4 pb-24 pt-24 sm:px-6 lg:px-8">
         <Suspense
           fallback={
@@ -89,7 +97,7 @@ function App() {
           </Routes>
         </Suspense>
       </main>
-      <Footer name={profile.name} year={year} />
+      <Footer name={profileWithBase.name} year={year} />
     </div>
   );
 }

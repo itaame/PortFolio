@@ -3,9 +3,11 @@ import { SEO } from '../lib/seo';
 import Timeline, { TimelineItem } from '../components/Timeline';
 import { formatDateRange } from '../lib/utils';
 import { Button } from '../components/Form';
+import { withBase } from '../lib/withBase';
 
 export default function Experience() {
   const timeline = [...experience].sort((a, b) => Number(b.start) - Number(a.start));
+  const resumeUrl = withBase('Ilyasse-Taame-CV.pdf');
 
   return (
     <div className="space-y-12">
@@ -18,7 +20,7 @@ export default function Experience() {
           </p>
         </div>
         <Button asChild variant="secondary">
-          <a href="/Ilyasse-Taame-CV.pdf" download>
+          <a href={resumeUrl} download>
             Download CV
           </a>
         </Button>

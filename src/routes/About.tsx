@@ -6,6 +6,7 @@ import Tag from '../components/Tag';
 import Card from '../components/Card';
 import Timeline, { TimelineItem } from '../components/Timeline';
 import { formatDateRange } from '../lib/utils';
+import { withBase } from '../lib/withBase';
 
 const focusAreas = [
   {
@@ -62,7 +63,7 @@ export default function About() {
           </div>
           <figure className="relative mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
             <img
-              src="/assets/projects/about5.JPG"
+              src={withBase('assets/projects/about5.JPG')}
               alt="Ilyasse Taame in mission control"
               loading="lazy"
               className="aspect-[4/5] w-full object-cover"
@@ -81,7 +82,7 @@ export default function About() {
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
             <img
-              src="/assets/projects/about1.PNG"
+              src={withBase('assets/projects/about1.PNG')}
               alt="Mission control consoles with glowing telemetry displays"
               loading="lazy"
               className="h-60 w-full object-cover"
@@ -97,7 +98,7 @@ export default function About() {
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
             <img
-              src="/assets/projects/about2.JPG"
+              src={withBase('assets/projects/about2.JPG')}
               alt="Mission control consoles with glowing telemetry displays"
               loading="lazy"
               className="h-60 w-full object-cover"
@@ -112,7 +113,7 @@ export default function About() {
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
             <img
-              src="/assets/projects/about3.JPG"
+              src={withBase('assets/projects/about3.JPG')}
               alt="Astronaut training aircraft flying over clouds"
               loading="lazy"
               className="h-56 w-full object-cover"
@@ -144,7 +145,7 @@ export default function About() {
           </aside>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
             <img
-              src="/assets/projects/about4.JPG"
+              src={withBase('assets/projects/about4.JPG')}
               alt="Ilyasse Taame in mission control"
               loading="lazy"
               className="aspect-[4/5] w-full object-cover"

@@ -7,9 +7,12 @@ import { Button } from '../components/Form';
 import Tag from '../components/Tag';
 import Card from '../components/Card';
 import { SEO } from '../lib/seo';
+import { withBase } from '../lib/withBase';
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 2);
+  const avatarSrc = withBase(profile.avatar);
+  const resumeUrl = withBase('Ilyasse-Taame-CV.pdf');
 
   return (
     <div className="space-y-16">
@@ -29,7 +32,7 @@ export default function Home() {
               <Link to="/contact">Contact Me</Link>
             </Button>
             <Button asChild variant="ghost">
-              <a href="/Ilyasse-Taame-CV.pdf" target="_blank" rel="noreferrer">
+              <a href={resumeUrl} target="_blank" rel="noreferrer">
                 Download CV
               </a>
             </Button>
@@ -62,7 +65,7 @@ export default function Home() {
         <div className="relative flex items-center justify-center">
           <div className="relative h-64 w-64 overflow-hidden rounded-3xl border-4 border-white shadow-2xl ring-4 ring-accent/20 dark:border-slate-900">
             <img
-              src={profile.avatar}
+              src={avatarSrc}
               alt={`${profile.name} portrait`}
               className="h-full w-full object-cover"
               loading="lazy"
