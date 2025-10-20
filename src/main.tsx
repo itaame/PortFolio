@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import { HelmetProvider } from './providers/HelmetProvider';
-import { HashRouter } from 'react-router-dom';
 
 const basename = (() => {
   const baseUrl = import.meta.env.BASE_URL ?? '/';
@@ -18,10 +17,9 @@ const basename = (() => {
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
-      const basename = import.meta.env.BASE_URL;
-      <HashRouter>
+      <BrowserRouter basename={basename}>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>
 );
