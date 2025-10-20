@@ -3,6 +3,7 @@ import projects from '../data/projects.json';
 import Card from '../components/Card';
 import Tag from '../components/Tag';
 import { SEO } from '../lib/seo';
+import { withBase } from '../lib/withBase';
 
 export default function Project() {
   const { slug } = useParams<{ slug: string }>();
@@ -21,9 +22,16 @@ export default function Project() {
     );
   }
 
+  const imageSources = project.images.map((image) => withBase(image));
+
   return (
     <article className="space-y-12">
-      <SEO title={project.title} description={project.summary} path={`/projects/${project.slug}`} image={project.images[0]} />
+      <SEO
+        title={project.title}
+        description={project.summary}
+        path={`/projects/${project.slug}`}
+        image={imageSources[0]}
+      />
       <header className="space-y-4">
         <Tag variant="accent">Case Study</Tag>
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white">{project.title}</h1>
@@ -35,7 +43,7 @@ export default function Project() {
         </div>
       </header>
       <div className="grid gap-6 md:grid-cols-2">
-        {project.images.map((image) => (
+        {imageSources.map((image) => (
           <img
             key={image}
             src={image}

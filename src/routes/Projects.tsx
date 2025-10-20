@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import projects from '../data/projects.json';
 import Card from '../components/Card';
 import { SEO } from '../lib/seo';
+import { withBase } from '../lib/withBase';
 
 export default function Projects() {
   return (
@@ -19,7 +20,7 @@ export default function Projects() {
             <div className="space-y-4">
               <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
                 <img
-                  src={project.images[0]}
+                  src={withBase(project.images[0])}
                   alt={`${project.title} preview`}
                   className="h-48 w-full object-cover"
                   loading="lazy"
