@@ -7,7 +7,8 @@ import { HelmetProvider } from './providers/HelmetProvider';
 
 const basename = (() => {
   const baseUrl = import.meta.env.BASE_URL ?? '/';
-  const normalized = baseUrl.replace(/\/+$/, '');
+  const url = new URL(baseUrl, window.location.origin);
+  const normalized = url.pathname.replace(/\/+$/, '');
   return normalized === '' ? '/' : normalized;
 })();
 
