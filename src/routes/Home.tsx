@@ -15,12 +15,27 @@ export default function Home() {
   const avatarSrc = withBase(profile.avatar);
   const resumeUrl = withBase('Ilyasse-Taame-CV.pdf');
   const skillProjectMap = useMemo(() => {
+    const searchableProjects = projects.map((project) => {
+      const searchableText = [
+        project.title,
+        project.summary,
+        ...(project.stack ?? []),
+        ...(project.highlights ?? []),
+        ...(project.problem ?? []),
+        ...(project.approach ?? []),
+        ...(project.results ?? [])
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+
+      return searchableText;
+    });
+
     return skills.reduce<Record<string, boolean>>((acc, skill) => {
-      const normalizedSkill = skill.toLowerCase().trim();
-      const hasMatchingProject = projects.some((project) =>
-        (project.stack ?? [])
-          .map((stackSkill) => stackSkill.toLowerCase().trim())
-          .includes(normalizedSkill)
+      const normalizedSkill = skill.toLowerCase();
+      const hasMatchingProject = searchableProjects.some((content) =>
+        content.includes(normalizedSkill)
       );
 
       acc[skill] = hasMatchingProject;
