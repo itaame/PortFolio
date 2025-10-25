@@ -5,6 +5,23 @@ import App from './App';
 import './index.css';
 import { HelmetProvider } from './providers/HelmetProvider';
 
+const redirectKey = 'portfolio:redirect';
+
+if (typeof window !== 'undefined') {
+  try {
+    const pendingRedirect = window.sessionStorage.getItem(redirectKey);
+    if (pendingRedirect) {
+      window.sessionStorage.removeItem(redirectKey);
+      const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+      if (pendingRedirect !== current) {
+        window.history.replaceState(null, '', pendingRedirect);
+      }
+    }
+  } catch (error) {
+    // If sessionStorage is unavailable (e.g. private mode), skip restoring the redirect.
+  }
+}
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
