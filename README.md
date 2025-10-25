@@ -43,7 +43,6 @@ Set `VITE_PLAUSIBLE_DOMAIN` in a `.env` file (not committed) or deployment envir
 - Use the provided `netlify.toml`
 - Build command: `pnpm build`
 - Publish directory: `dist`
-- Forms work automatically thanks to the Netlify attributes on the contact form
 
 ### Vercel
 
@@ -71,6 +70,6 @@ pnpm dev
 pnpm build
 ```
 
-- For Netlify: connect repository, set build command to `pnpm build`, publish directory `dist`, enable forms.
+- For Netlify: connect repository, set build command to `pnpm build`, publish directory `dist`.
 - For Vercel: import project, set build command to `pnpm build`, output directory `dist`.
 - Update JSON in `src/data/` to adjust site content; redeploy to publish changes.
