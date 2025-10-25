@@ -2,6 +2,25 @@ import profile from '../data/profile.json';
 import socials from '../data/socials.json';
 import { SEO } from '../lib/seo';
 
+const contactDetails = [
+  {
+    term: 'Location',
+    description: profile.location,
+  },
+  {
+    term: 'Email',
+    description: (
+      <a
+        href={`mailto:${profile.email}`}
+        className="hover:text-accent"
+        aria-label={`Email ${profile.email}`}
+      >
+        {profile.email}
+      </a>
+    ),
+  },
+];
+
 export default function Contact() {
   const formspreeFormId = import.meta.env.VITE_FORMSPREE_FORM_ID as string | undefined;
   const formspreeEndpoint = formspreeFormId ? `https://formspree.io/f/${formspreeFormId}` : undefined;
