@@ -33,7 +33,7 @@ export default function Experience() {
             subtitle={`${item.organization} · ${item.location}`}
             meta={formatDateRange(item.start, item.end)}
           >
-            <ul className="list-inside list-disc space-y-2">
+            <ul className="list-disc space-y-2 pl-4">
               {item.achievements.map((achievement) => (
                 <li key={achievement}>{achievement}</li>
               ))}
