@@ -4,6 +4,9 @@ import { Button, Input, Textarea } from '../components/Form';
 import { SEO } from '../lib/seo';
 
 export default function Contact() {
+  const formspreeFormId = import.meta.env.VITE_FORMSPREE_FORM_ID as string | undefined;
+  const formspreeEndpoint = formspreeFormId ? `https://formspree.io/f/${formspreeFormId}` : undefined;
+
   return (
     <div className="space-y-12">
       <SEO title="Contact" description="Reach out to collaborate on mission control software, telemetry pipelines, or research." path="/contact" />
@@ -19,7 +22,7 @@ export default function Contact() {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="https://formspree.io/f/xbjnzryd"
+          {...(formspreeEndpoint ? { action: formspreeEndpoint } : {})}
           className="space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900"
         >
           <input type="hidden" name="form-name" value="contact" />
@@ -44,7 +47,8 @@ export default function Contact() {
             <Textarea name="message" rows={6} required placeholder="Share context, timelines, and goals." />
           </label>
           <p className="text-xs text-slate-500 dark:text-slate-400">
-            Form is wired for Netlify deployments and falls back to Formspree. You’ll receive a confirmation when delivered.
+            Form is wired for Netlify deployments{formspreeEndpoint ? ' and falls back to Formspree' : ''}. You’ll receive a
+            confirmation when delivered.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Button type="submit">Send message</Button>
@@ -85,10 +89,18 @@ export default function Contact() {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl bg-slate-100 p-4 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-            Prefer automation? POST JSON to Formspree endpoint <code className="font-mono">https://formspree.io/f/xbjnzryd</code> with
-            <code className="font-mono">name</code>, <code className="font-mono">email</code>, and <code className="font-mono">message</code> fields.
-          </div>
+          {formspreeEndpoint ? (
+            <div className="rounded-2xl bg-slate-100 p-4 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+              Prefer automation? POST JSON to Formspree endpoint{' '}
+              <code className="font-mono">{formspreeEndpoint}</code> with <code className="font-mono">name</code>,{' '}
+              <code className="font-mono">email</code>, and <code className="font-mono">message</code> fields.
+            </div>
+          ) : (
+            <div className="rounded-2xl bg-slate-100 p-4 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+              Prefer automation? Configure a <code className="font-mono">VITE_FORMSPREE_FORM_ID</code> environment variable to enable the
+              Formspree JSON endpoint fallback.
+            </div>
+          )}
         </aside>
       </div>
     </div>
