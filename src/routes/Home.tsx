@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../data/profile.json';
 import skills from '../data/skills.json';
@@ -13,6 +14,40 @@ export default function Home() {
   const featuredProjects = projects.slice(0, 2);
   const avatarSrc = withBase(profile.avatar);
   const resumeUrl = withBase('Ilyasse-Taame-CV.pdf');
+  const skillProjectMap = useMemo(() => {
+    const searchableProjects = projects.map((project) => {
+      const searchableText = [
+        project.title,
+        project.summary,
+        ...(project.stack ?? []),
+        ...(project.highlights ?? []),
+        ...(project.problem ?? []),
+        ...(project.approach ?? []),
+        ...(project.results ?? [])
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+
+      return {
+        slug: project.slug,
+        content: searchableText
+      };
+    });
+
+    return skills.reduce<Record<string, string | undefined>>((acc, skill) => {
+      const normalizedSkill = skill.toLowerCase();
+      const matchedProject = searchableProjects.find((project) =>
+        project.content.includes(normalizedSkill)
+      );
+
+      if (matchedProject) {
+        acc[skill] = matchedProject.slug;
+      }
+
+      return acc;
+    }, {});
+  }, [skills, projects]);
 
   return (
     <div className="space-y-16">
@@ -83,15 +118,36 @@ export default function Home() {
           <span className="text-sm text-slate-500 dark:text-slate-400">Rapid to adapt, built for mission tempo</span>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-200"
-            >
-              <span className="h-2 w-2 rounded-full bg-accent" aria-hidden />
-              {skill}
-            </div>
-          ))}
+          {skills.map((skill) => {
+            const skillSlug = skillProjectMap[skill];
+            const baseClass =
+              'flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-200';
+            const content = (
+              <>
+                <span className="h-2 w-2 rounded-full bg-accent" aria-hidden />
+                {skill}
+              </>
+            );
+
+            if (!skillSlug) {
+              return (
+                <div key={skill} className={baseClass}>
+                  {content}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={skill}
+                to={`/projects/${skillSlug}`}
+                className={`${baseClass} hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent`}
+                aria-label={`View projects related to ${skill}`}
+              >
+                {content}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
