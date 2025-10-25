@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { Button } from '../components/Form';
+import { Button, Input, Textarea } from '../components/Form';
 import profile from '../data/profile.json';
 import socials from '../data/socials.json';
 import { SEO } from '../lib/seo';
@@ -39,11 +39,38 @@ export default function Contact() {
         </p>
       </header>
       <div className="grid gap-8 lg:grid-cols-[1fr,0.8fr]">
-        <section className="space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Get in touch</h2>
-          <p className="text-sm text-slate-600 dark:text-slate-300">
-            I’ve paused inbound forms to focus on active collaborations. The best way to reach me is by sending an email or
-            dropping a note through one of the social channels.
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          {...(formspreeEndpoint ? { action: formspreeEndpoint } : {})}
+          className="space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p className="hidden">
+            <label>
+              Don’t fill this out:
+              <input name="bot-field" type="text" autoComplete="off" />
+            </label>
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+              Name
+              <Input name="name" required autoComplete="name" placeholder="Your name" />
+            </label>
+            <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+              Email
+              <Input name="email" type="email" required autoComplete="email" placeholder="name@mail.com" />
+            </label>
+          </div>
+          <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+            Message
+            <Textarea name="message" rows={6} required placeholder="Share context, timelines, and goals." />
+          </label>
+          <p className="text-xs text-slate-500 dark:text-slate-400">
+            Form is wired for Netlify deployments
+            {formspreeEndpoint ? ' and falls back to Formspree' : ''}. You’ll receive a confirmation when delivered.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Button asChild>
@@ -55,7 +82,7 @@ export default function Contact() {
               </a>
             </Button>
           </div>
-        </section>
+        </form>
         <aside className="space-y-6">
           <dl className="space-y-3 text-sm">
             {contactDetails.map((detail) => (
@@ -65,10 +92,7 @@ export default function Contact() {
               </div>
             ))}
           </dl>
-          <div
-            id="social-channels"
-            className="space-y-3 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900"
-          >
+          <div className="space-y-3 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Social channels</h3>
             <div className="flex flex-wrap gap-2">
               {socials.map((social) => (
@@ -84,6 +108,18 @@ export default function Contact() {
               ))}
             </div>
           </div>
+          {formspreeEndpoint ? (
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 text-xs text-slate-600 shadow-soft dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+              Prefer automation? POST JSON to Formspree endpoint{' '}
+              <code className="font-mono">{formspreeEndpoint}</code> with <code className="font-mono">name</code>,{' '}
+              <code className="font-mono">email</code>, and <code className="font-mono">message</code> fields.
+            </div>
+          ) : (
+            <div className="rounded-3xl border border-dashed border-accent/50 bg-accent/5 p-6 text-xs text-slate-600 shadow-soft dark:border-accent/40 dark:bg-accent/10 dark:text-slate-300">
+              Prefer automation? Configure a <code className="font-mono">VITE_FORMSPREE_FORM_ID</code> environment variable to enable the
+              Formspree JSON endpoint fallback.
+            </div>
+          )}
         </aside>
       </div>
     </div>
