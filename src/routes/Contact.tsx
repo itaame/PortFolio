@@ -47,10 +47,10 @@ export default function Contact() {
       <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr]">
         <section className="space-y-6 rounded-3xl border border-slate-200 bg-gradient-to-br from-white/95 via-white/90 to-slate-50/80 p-8 shadow-lg backdrop-blur-sm dark:border-slate-800 dark:from-slate-900/95 dark:via-slate-900/90 dark:to-slate-950/80">
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Primary channels</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Reach out directly</h2>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              The inbound form is on hold while I focus on active operations. Reach out directly and I’ll reply as soon as I step away
-              from the console.
+              I’m easiest to reach over email. Share your mission overview, timelines, and goals and I’ll respond as soon as I step
+              away from the console.
             </p>
           </div>
           <form
@@ -101,13 +101,8 @@ export default function Contact() {
             {formspreeEndpoint ? ' and falls back to Formspree' : ''}. You’ll receive a confirmation when delivered.
           </p>
           <div className="flex flex-wrap items-center gap-3">
-            <Button asChild>
+            <Button asChild className="w-full sm:w-auto">
               <a href={`mailto:${profile.email}`}>Email {profile.name}</a>
-            </Button>
-            <Button asChild variant="secondary">
-              <a href="#social-channels">
-                View socials
-              </a>
             </Button>
           </div>
         </section>
