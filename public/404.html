@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <style>
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        color: #0f172a;
+        background-color: #f8fafc;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: #e2e8f0;
+          background-color: #020817;
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        try {
+          sessionStorage.setItem('portfolio:redirect', path);
+        } catch (error) {
+          // ignore storage failures (e.g. Safari private mode)
+        }
+        var baseMatch = window.location.pathname.match(/^\/(.+?)\//);
+        var base = baseMatch ? '/' + baseMatch[1] + '/' : '/';
+        // Ensure the configured base is preserved when redirecting back to the SPA entry point.
+        var target = base === '/' ? '/' : base;
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting you back to the portfolio…</p>
+    <noscript>
+      <p>
+        JavaScript is required to view this site. Please enable JavaScript and navigate to
+        <code>/PortFolio/</code>.
+      </p>
+    </noscript>
+  </body>
+</html>
