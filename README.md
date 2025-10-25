@@ -7,7 +7,7 @@ Modern, production-ready portfolio for Ilyasse Taame showcasing spacecraft opera
 - ⚡️ Blazing fast Vite build with per-route code splitting and hover prefetching
 - 🎨 Accessible design system using Tailwind, reusable UI primitives, dark/light theme with persistence
 - 📡 Mission-focused storytelling for projects, experience timeline, and publications with BibTeX copy support
-- 📨 Direct contact details with quick email and social links
+- 📨 Netlify-ready contact form with optional Formspree fallback (configure `VITE_FORMSPREE_FORM_ID`), honeypot field, and mailto shortcut
 - 📈 Optional Plausible analytics hook controlled via `VITE_PLAUSIBLE_DOMAIN`
 - 🗺️ SEO-friendly metadata, Open Graph/Twitter tags, sitemap, robots, RSS feed, and manifest
 - ✅ Automated CI for type checks, builds, and tests via GitHub Actions
