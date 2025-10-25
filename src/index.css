@@ -18,6 +18,16 @@ a:hover {
   @apply text-accent;
 }
 
+@layer base {
+  p,
+  li,
+  dd,
+  blockquote {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
 [data-theme='dark'] body {
   @apply bg-slate-950 text-slate-100;
 }
