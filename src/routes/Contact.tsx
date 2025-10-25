@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
-import { Button, Input, Textarea } from '../components/Form';
+import { Button } from '../components/Form';
+import Tag from '../components/Tag';
 import profile from '../data/profile.json';
 import socials from '../data/socials.json';
 import { SEO } from '../lib/seo';
@@ -43,31 +44,18 @@ export default function Contact() {
       <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr]">
         <section className="space-y-6 rounded-3xl border border-slate-200 bg-gradient-to-br from-white/95 via-white/90 to-slate-50/80 p-8 shadow-lg backdrop-blur-sm dark:border-slate-800 dark:from-slate-900/95 dark:via-slate-900/90 dark:to-slate-950/80">
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Primary channels</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Reach out directly</h2>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              The inbound form is on hold while I focus on active operations. Reach out directly and I’ll reply as soon as I step away
-              from the console.
+              I’m easiest to reach over email. Share your mission overview, timelines, and goals and I’ll respond as soon as I step
+              away from the console.
             </p>
           </div>
-          <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
-            Message
-            <Textarea name="message" rows={6} required placeholder="Share context, timelines, and goals." />
-          </label>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            Form is wired for Netlify deployments
-            {formspreeEndpoint ? ' and falls back to Formspree' : ''}. You’ll receive a confirmation when delivered.
-          </p>
           <div className="flex flex-wrap items-center gap-3">
-            <Button asChild>
+            <Button asChild className="w-full sm:w-auto">
               <a href={`mailto:${profile.email}`}>Email {profile.name}</a>
             </Button>
-            <Button asChild variant="secondary">
-              <a href="#social-channels">
-                View socials
-              </a>
-            </Button>
           </div>
-        </form>
+        </section>
         <aside className="space-y-6">
           <dl className="space-y-3 text-sm">
             {contactDetails.map((detail) => (
@@ -91,18 +79,6 @@ export default function Contact() {
                   {social.label}
                 </a>
               ))}
-            </div>
-          </div>
-          {formspreeEndpoint ? (
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 text-xs text-slate-600 shadow-soft dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
-              Prefer automation? POST JSON to Formspree endpoint{' '}
-              <code className="font-mono">{formspreeEndpoint}</code> with <code className="font-mono">name</code>,{' '}
-              <code className="font-mono">email</code>, and <code className="font-mono">message</code> fields.
-            </div>
-          ) : (
-            <div className="rounded-3xl border border-dashed border-accent/50 bg-accent/5 p-6 text-xs text-slate-600 shadow-soft dark:border-accent/40 dark:bg-accent/10 dark:text-slate-300">
-              Prefer automation? Configure a <code className="font-mono">VITE_FORMSPREE_FORM_ID</code> environment variable to enable the
-              Formspree JSON endpoint fallback.
             </div>
           </div>
         </aside>
