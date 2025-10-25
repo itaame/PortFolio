@@ -15,22 +15,11 @@ export default function Projects() {
       return projects;
     }
 
-    return projects.filter((project) => {
-      const searchableText = [
-        project.title,
-        project.summary,
-        ...(project.stack ?? []),
-        ...(project.highlights ?? []),
-        ...(project.problem ?? []),
-        ...(project.approach ?? []),
-        ...(project.results ?? [])
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-
-      return searchableText.includes(normalizedSkillFilter);
-    });
+    return projects.filter((project) =>
+      (project.stack ?? [])
+        .map((stackSkill) => stackSkill.toLowerCase().trim())
+        .includes(normalizedSkillFilter)
+    );
   }, [normalizedSkillFilter]);
 
   return (

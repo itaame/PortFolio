@@ -15,35 +15,15 @@ export default function Home() {
   const avatarSrc = withBase(profile.avatar);
   const resumeUrl = withBase('Ilyasse-Taame-CV.pdf');
   const skillProjectMap = useMemo(() => {
-    const searchableProjects = projects.map((project) => {
-      const searchableText = [
-        project.title,
-        project.summary,
-        ...(project.stack ?? []),
-        ...(project.highlights ?? []),
-        ...(project.problem ?? []),
-        ...(project.approach ?? []),
-        ...(project.results ?? [])
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-
-      return {
-        slug: project.slug,
-        content: searchableText
-      };
-    });
-
-    return skills.reduce<Record<string, string | undefined>>((acc, skill) => {
-      const normalizedSkill = skill.toLowerCase();
-      const matchedProject = searchableProjects.find((project) =>
-        project.content.includes(normalizedSkill)
+    return skills.reduce<Record<string, boolean>>((acc, skill) => {
+      const normalizedSkill = skill.toLowerCase().trim();
+      const hasMatchingProject = projects.some((project) =>
+        (project.stack ?? [])
+          .map((stackSkill) => stackSkill.toLowerCase().trim())
+          .includes(normalizedSkill)
       );
 
-      if (matchedProject) {
-        acc[skill] = matchedProject.slug;
-      }
+      acc[skill] = hasMatchingProject;
 
       return acc;
     }, {});
@@ -119,7 +99,7 @@ export default function Home() {
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => {
-            const skillSlug = skillProjectMap[skill];
+            const hasProjects = skillProjectMap[skill];
             const baseClass =
               'flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-200';
             const content = (
@@ -129,7 +109,7 @@ export default function Home() {
               </>
             );
 
-            if (!skillSlug) {
+            if (!hasProjects) {
               return (
                 <div key={skill} className={baseClass}>
                   {content}
@@ -140,7 +120,7 @@ export default function Home() {
             return (
               <Link
                 key={skill}
-                to={`/projects/${skillSlug}`}
+                to={{ pathname: '/projects', search: `?skill=${encodeURIComponent(skill)}` }}
                 className={`${baseClass} hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent`}
                 aria-label={`View projects related to ${skill}`}
               >
