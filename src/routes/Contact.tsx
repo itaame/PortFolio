@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
 import { Button, Input, Textarea } from '../components/Form';
+import Tag from '../components/Tag';
 import profile from '../data/profile.json';
 import socials from '../data/socials.json';
 import { SEO } from '../lib/seo';
@@ -23,6 +24,9 @@ const contactDetails: Array<{ term: string; description: ReactNode }> = [
     ),
   },
 ];
+
+const formspreeFormId = import.meta.env.VITE_FORMSPREE_FORM_ID;
+const formspreeEndpoint = formspreeFormId ? `https://formspree.io/f/${formspreeFormId}` : null;
 
 export default function Contact() {
   return (
@@ -49,10 +53,49 @@ export default function Contact() {
               from the console.
             </p>
           </div>
-          <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
-            Message
-            <Textarea name="message" rows={6} required placeholder="Share context, timelines, and goals." />
-          </label>
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            className="space-y-4"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="subject" value="New contact via portfolio" />
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                Name
+                <Input name="name" autoComplete="name" required placeholder="How should I address you?" />
+              </label>
+              <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                Company
+                <Input name="company" autoComplete="organization" placeholder="Mission, team, or organization" />
+              </label>
+            </div>
+            <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+              Email
+              <Input
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                placeholder="Where should I send the follow-up?"
+              />
+            </label>
+            <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+              Mission overview
+              <Textarea name="message" rows={6} required placeholder="Share context, timelines, and goals." />
+            </label>
+            <div className="hidden">
+              <label>
+                Don’t fill this out if you’re human
+                <Input name="bot-field" tabIndex={-1} autoComplete="off" />
+              </label>
+            </div>
+            <Button type="submit" className="w-full sm:w-auto">
+              Send message
+            </Button>
+          </form>
           <p className="text-xs text-slate-500 dark:text-slate-400">
             Form is wired for Netlify deployments
             {formspreeEndpoint ? ' and falls back to Formspree' : ''}. You’ll receive a confirmation when delivered.
@@ -67,7 +110,7 @@ export default function Contact() {
               </a>
             </Button>
           </div>
-        </form>
+        </section>
         <aside className="space-y-6">
           <dl className="space-y-3 text-sm">
             {contactDetails.map((detail) => (
@@ -104,7 +147,7 @@ export default function Contact() {
               Prefer automation? Configure a <code className="font-mono">VITE_FORMSPREE_FORM_ID</code> environment variable to enable the
               Formspree JSON endpoint fallback.
             </div>
-          </div>
+          )}
         </aside>
       </div>
     </div>
