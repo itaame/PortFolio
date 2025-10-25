@@ -7,7 +7,7 @@ Modern, production-ready portfolio for Ilyasse Taame showcasing spacecraft opera
 - ⚡️ Blazing fast Vite build with per-route code splitting and hover prefetching
 - 🎨 Accessible design system using Tailwind, reusable UI primitives, dark/light theme with persistence
 - 📡 Mission-focused storytelling for projects, experience timeline, and publications with BibTeX copy support
-- 📨 Netlify-ready contact form with Formspree fallback, honeypot field, and mailto shortcut
+- 📨 Direct contact details with quick email and social links
 - 📈 Optional Plausible analytics hook controlled via `VITE_PLAUSIBLE_DOMAIN`
 - 🗺️ SEO-friendly metadata, Open Graph/Twitter tags, sitemap, robots, RSS feed, and manifest
 - ✅ Automated CI for type checks, builds, and tests via GitHub Actions
@@ -43,7 +43,6 @@ Set `VITE_PLAUSIBLE_DOMAIN` in a `.env` file (not committed) or deployment envir
 - Use the provided `netlify.toml`
 - Build command: `pnpm build`
 - Publish directory: `dist`
-- Forms work automatically thanks to the Netlify attributes on the contact form
 
 ### Vercel
 
@@ -71,6 +70,6 @@ pnpm dev
 pnpm build
 ```
 
-- For Netlify: connect repository, set build command to `pnpm build`, publish directory `dist`, enable forms.
+- For Netlify: connect repository, set build command to `pnpm build`, publish directory `dist`.
 - For Vercel: import project, set build command to `pnpm build`, output directory `dist`.
 - Update JSON in `src/data/` to adjust site content; redeploy to publish changes.
