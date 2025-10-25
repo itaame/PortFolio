@@ -32,37 +32,22 @@ export default function Contact() {
         description="Reach out to collaborate on mission control software, telemetry pipelines, or research."
         path="/contact"
       />
-      <header className="space-y-4 text-center">
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Contact</h1>
-        <p className="mx-auto max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-          The quickest way to get in touch is via email or the social channels below. I look forward to hearing from you.
+      <header className="space-y-5 text-center">
+        <Tag variant="accent" className="mx-auto w-fit">Collaborations</Tag>
+        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Let’s connect</h1>
+        <p className="mx-auto max-w-2xl text-base text-slate-600 dark:text-slate-300">
+          Whether you’re planning a mission rehearsal, telemetry pipeline, or a research partnership, I’m always happy to discuss
+          how we can work together.
         </p>
       </header>
-      <div className="grid gap-8 lg:grid-cols-[1fr,0.8fr]">
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          {...(formspreeEndpoint ? { action: formspreeEndpoint } : {})}
-          className="space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <p className="hidden">
-            <label>
-              Don’t fill this out:
-              <input name="bot-field" type="text" autoComplete="off" />
-            </label>
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
-              Name
-              <Input name="name" required autoComplete="name" placeholder="Your name" />
-            </label>
-            <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
-              Email
-              <Input name="email" type="email" required autoComplete="email" placeholder="name@mail.com" />
-            </label>
+      <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr]">
+        <section className="space-y-6 rounded-3xl border border-slate-200 bg-gradient-to-br from-white/95 via-white/90 to-slate-50/80 p-8 shadow-lg backdrop-blur-sm dark:border-slate-800 dark:from-slate-900/95 dark:via-slate-900/90 dark:to-slate-950/80">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Primary channels</h2>
+            <p className="text-sm text-slate-600 dark:text-slate-300">
+              The inbound form is on hold while I focus on active operations. Reach out directly and I’ll reply as soon as I step away
+              from the console.
+            </p>
           </div>
           <label className="space-y-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
             Message
@@ -119,7 +104,7 @@ export default function Contact() {
               Prefer automation? Configure a <code className="font-mono">VITE_FORMSPREE_FORM_ID</code> environment variable to enable the
               Formspree JSON endpoint fallback.
             </div>
-          )}
+          </div>
         </aside>
       </div>
     </div>
