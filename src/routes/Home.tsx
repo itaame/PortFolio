@@ -35,14 +35,14 @@ export default function Home() {
       };
     });
 
-    return skills.reduce<Record<string, string[] | undefined>>((acc, skill) => {
+    return skills.reduce<Record<string, string | undefined>>((acc, skill) => {
       const normalizedSkill = skill.toLowerCase();
-      const matchedProjects = searchableProjects.filter((project) =>
+      const matchedProject = searchableProjects.find((project) =>
         project.content.includes(normalizedSkill)
       );
 
-      if (matchedProjects.length > 0) {
-        acc[skill] = matchedProjects.map((project) => project.slug);
+      if (matchedProject) {
+        acc[skill] = matchedProject.slug;
       }
 
       return acc;
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => {
-            const matchedSlugs = skillProjectMap[skill];
+            const skillSlug = skillProjectMap[skill];
             const baseClass =
               'flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-200';
             const content = (
@@ -129,7 +129,7 @@ export default function Home() {
               </>
             );
 
-            if (!matchedSlugs) {
+            if (!skillSlug) {
               return (
                 <div key={skill} className={baseClass}>
                   {content}
@@ -140,7 +140,7 @@ export default function Home() {
             return (
               <Link
                 key={skill}
-                to={`/projects?skill=${encodeURIComponent(skill)}`}
+                to={`/projects/${skillSlug}`}
                 className={`${baseClass} hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent`}
                 aria-label={`View projects related to ${skill}`}
               >
