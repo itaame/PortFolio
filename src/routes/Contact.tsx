@@ -25,9 +25,6 @@ const contactDetails: Array<{ term: string; description: ReactNode }> = [
 ];
 
 export default function Contact() {
-  const formspreeFormId = import.meta.env.VITE_FORMSPREE_FORM_ID as string | undefined;
-  const formspreeEndpoint = formspreeFormId ? `https://formspree.io/f/${formspreeFormId}` : undefined;
-
   return (
     <div className="space-y-12">
       <SEO
@@ -76,9 +73,13 @@ export default function Contact() {
             {formspreeEndpoint ? ' and falls back to Formspree' : ''}. You’ll receive a confirmation when delivered.
           </p>
           <div className="flex flex-wrap items-center gap-3">
-            <Button type="submit">Send message</Button>
+            <Button asChild>
+              <a href={`mailto:${profile.email}`}>Email {profile.name}</a>
+            </Button>
             <Button asChild variant="secondary">
-              <a href={`mailto:${profile.email}`}>Email directly</a>
+              <a href="#social-channels">
+                View socials
+              </a>
             </Button>
           </div>
         </form>
