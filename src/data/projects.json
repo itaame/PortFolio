@@ -14,6 +14,8 @@
     },
     "images": [
       "/assets/projects/mcc-voice-loops3.JPEG",
+      "/assets/projects/mcc-voice-loops5.jpg",
+      "/assets/projects/mcc-voice-loops6.PNG",
       "/assets/projects/mcc-voice-loops.png"
     ],
     "problem": [
@@ -27,14 +29,15 @@
     ],
     "results": [
       "Increased Flight Controller's situational awareness",
-      "Enabled Artificial voice delay"
+      "Enabled Artificial voice delay",
+      "Nominally deployed in the ASCLEPIOS V and WBA Spartan Space analog space missions"
     ]
   },
   {
     "title": "Real-Time Flight-Ops GUI",
     "slug": "real-time-gui",
-    "summary": "Magnetohydrodynamic Vortex‑Inducing Photobioreactor Experiment (MVIPER) tests a novel way to mix and de‑gas algal photobioreactors in weightlessness. Instead of pumps and membranes, it uses a magnetohydrodynamic (MHD) drive: electrodes impose an electric field through a conductive growth medium while permanent magnets supply a perpendicular magnetic field. The resulting Lorentz force spins the liquid into a vortex that should drive liquid outward and force gas bubbles inward for easy separation, potentially making future life‑support bioreactors simpler, lighter, and more reliable in space. The experiment was tested during the 87ᵗʰ ESA–Novespace parabolic‑flight campaign in September 2025. The GUI fuses 15 sensor channels telemetry, FLIR video, and live g-level classification into a single dashboard used on the A310 Novespace Zero-G aircraft.",
-    "stack": ["Teensy 4.1", "C/C++", "Python", "FLIR", "CCSDS", "RocksDB", "YAMCS"],
+    "summary": "Magnetohydrodynamic Vortex‑Inducing Photobioreactor Experiment (MVIPER) tests a novel way to mix and de‑gas algal photobioreactors in weightlessness. Instead of pumps and membranes, it uses a magnetohydrodynamic (MHD) drive: electrodes impose an electric field through a conductive growth medium while permanent magnets supply a perpendicular magnetic field. The resulting Lorentz force spins the liquid into a vortex that should drive liquid outward and force gas bubbles inward for easy separation, potentially making future life‑support bioreactors simpler, lighter, and more reliable in space. The experiment was tested during the 87ᵗʰ ESA–Novespace parabolic‑flight campaign in September 2025. The GUI fuses 15 sensor channels telemetry, live video feed, and live g-level classification into a single dashboard used on the A310 Novespace Zero-G aircraft.",
+    "stack": ["Teensy 4.1", "C/C++", "Python", "CCSDS", "RocksDB", "YAMCS"],
     "highlights": [
       "Sustained 10 kHz sampling across multi-sensor buses",
       "Generated CRC16-wrapped frames with lossless buffering",
@@ -57,8 +60,8 @@
       "Persisted sensor readings to a local database"
     ],
     "results": [
-      "Xxxxx",
-      "Xxxxxx"
+      "All sensor data produced during three flights were correctly and redundantly stored",
+      "Operators successfully conducted the experiment with high situational awareness"
     ]
   },
   {
@@ -76,7 +79,7 @@
     },
     "images": [
       "/assets/projects/MCS2.png",
-      "/assets/projects/mcc-voice-loops.png"
+      "/assets/projects/MCS1.jpg"
     ],
     "problem": [
       "The analog Mission lacked an industry-like MCS",
@@ -106,19 +109,21 @@
     },
     "images": [
       "/assets/projects/airship1.jpeg",
-      "/assets/projects/mcc-voice-loops.png"
+      "/assets/projects/NDA.jpeg"
     ],
     "problem": [
-      "The analog Mission lacked an industry-like MCS",
-      "The FCT used multiple tools to achieve mission goals"
+      "Develop a test and validation framework for the avionic systems of the Airbus Urban Mobility Airship",
+      "Ensure realistic flight-dynamics visualization and reliable communication interfaces"
     ],
     "approach": [
-      "Implemented CCSDS-compliant MCS based on YAMCS",
-      "Trained the FCT on multiple instances on the MCS"
+      "Designed and implemented a Hardware-in-the-Loop (HiL) simulation environment using the TechSat ADS2 HiL PC",
+      "Interfaced the ADS2 with a Visualization PC running Microsoft Flight Simulator, exchanging aircraft-state data via UDP according to the flight dynamic model",
+      "Configured internal I/O devices to simulate communication links between avionics and the GCS"
     ],
     "results": [
-      "The FCT detected critical anomalies faster",
-      "The analog mission is now more aligned with the Space industry standards"
+      "Successfully validated end-to-end communication between the Ground Control Station and the Airship avionics in a real-time HiL setup",
+      "Achieved synchronized visualization of dynamic flight behavior in MSFS",
+      "Provided a functional HiL testbed architecture ready for integration and future development of autonomous airship control systems"
     ]
   },
   {
@@ -132,23 +137,26 @@
       "Successfully tested the Ground Control Station communications with the Airship"
     ],
     "links": {
-      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+      "source": "https://cnes.fr/projets/perseus"
     },
     "images": [
       "/assets/projects/cnes1.png",
       "/assets/projects/cnes2.png"
     ],
     "problem": [
-      "The analog Mission lacked an industry-like MCS",
-      "The FCT used multiple tools to achieve mission goals"
+      "Design an avionics system capable of real-time data acquisition and control for the ASTREOS-1 supersonic bi-liquid rocket demonstrator",
+      "Ensure compatibility with multiple analog and digital sensors, while maintaining modularity and electromagnetic robustness",
+      "Integrate control of multiple electromechanical actuators (solenoid valves) under strict aerospace reliability constraints"
     ],
     "approach": [
-      "Implemented CCSDS-compliant MCS based on YAMCS",
-      "Trained the FCT on multiple instances on the MCS"
+      "Developed a modular acquisition and control board with six to nine scalable sensor inputs",
+      "Implemented complete analog signal conditioning (amplification, filtering, isolation) and control stages using Altium Designer and Proteus simulations",
+      "Produced the complete design package: schematic and PCB layout, BOM, embedded firmware, and communication interface code"
     ],
     "results": [
-      "The FCT detected critical anomalies faster",
-      "The analog mission is now more aligned with the Space industry standards"
+      "Achieved a fully functional prototype compliant with performance and integration requirements",
+      "Verified full acquisition and control functionality through simulations and bench validation",
+      "Delivered a reusable avionics architecture for future ASTREOS rocket iterations, supporting expanded sensor and actuator configurations"
     ]
   },
   {
@@ -162,53 +170,92 @@
       "Successfully tested the Ground Control Station communications with the Airship"
     ],
     "links": {
-      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+      "source": "https://www.fsd.ed.tum.de/teaching/pfvt/"
     },
     "images": [
       "/assets/projects/ftl1.jpg",
       "/assets/projects/ftl2.png"
     ],
     "problem": [
-      "The analog Mission lacked an industry-like MCS",
-      "The FCT used multiple tools to achieve mission goals"
+      "Conduct a full experimental flight test campaign to evaluate aircraft performance, stability, and control characteristics",
+      "Bridge theoretical aerodynamics and flight mechanics with practical test execution and data analysis",
+      "Understand regulatory, operational, and crew coordination aspects of flight test engineering"
     ],
     "approach": [
-      "Implemented CCSDS-compliant MCS based on YAMCS",
-      "Trained the FCT on multiple instances on the MCS"
+      "Prepared detailed Flight Test Cards (FTCs) following aviation test procedures and safety requirements",
+      "Configured DA-42 simulator instrumentation and performed a two-hour demonstration flight covering 12 test cases",
+      "Acquired and processed flight data, applying analytical methods to derive aerodynamic coefficients and assess handling qualities"
     ],
     "results": [
-      "The FCT detected critical anomalies faster",
-      "The analog mission is now more aligned with the Space industry standards"
+      "Completed a full end-to-end flight testing workflow from planning to post-flight analysis",
+      "Validated theoretical models through experimental data",
+      "Gained practical insight into professional flight test practices, data integrity, and pilot–engineer collaboration"
     ]
   },
   {
     "title": "Flight Control Systems Lab",
     "slug": "fcsl",
     "summary": "Acquired an in-depth understanding of aerospace development processes, avionics systems, and certification standards, with a particular focus on DO-178C and DO-331. The work concentrated on the functional implementation of flight control algorithms, evaluation of flight dynamics, and development of flight control software modules. Gained practical expertise in data transmission using the CAN-based ARINC825 standard and investigated the integration of redundant electromechanical actuators (EMAs) within modern flight control architectures. Implemented and tested flight control strategies for a demonstrator aircraft (DA-42 simulator) through both Processor-In-The-Loop (PIL) and Hardware-In-The-Loop (HIL) simulations. Additionally, developed strong analytical insight into the factors affecting flying and handling qualities, along with the ability to evaluate Pilot-In-The-Loop interactions from both theoretical and experimental perspectives.",
-    "stack": ["MIL", "HIL", "PIL", "MATLAB", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
+    "stack": ["MIL", "HIL", "PIL", "MATLAB","DOORS", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
     "highlights": [
       "Built a full HIL testing environment for an Airships Avionic systems ",
       "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
       "Successfully tested the Ground Control Station communications with the Airship"
     ],
     "links": {
-      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+      "source": "https://www.fsd.ed.tum.de/teaching/pfr/"
     },
     "images": [
       "/assets/projects/fcsl1.png",
       "/assets/projects/fcsl2.png"
     ],
     "problem": [
-      "The analog Mission lacked an industry-like MCS",
-      "The FCT used multiple tools to achieve mission goals"
+      "Develop and certify a flight control system according to aerospace safety standards",
+      "Ensure reliable communication and actuator redundancy in a realistic avionics environment",
+      "Understand and test the pilot’s interaction within the flight control loop"
     ],
     "approach": [
-      "Implemented CCSDS-compliant MCS based on YAMCS",
-      "Trained the FCT on multiple instances on the MCS"
+      "Implemented flight-control algorithms in MATLAB/Simulink, then deployed them to a flight control computer",
+      "Established CAN-based communication via ARINC825 and integrated redundant EMAs",
+      "Conducted  Software, Hardware and Pilot-in-the-Loop simulations on the DA-42 aircraft simulator"
     ],
     "results": [
-      "The FCT detected critical anomalies faster",
-      "The analog mission is now more aligned with the Space industry standards"
+      "Achieved stable closed-loop control performance under multiple flight scenarios",
+      "Validated functional safety and redundancy handling in compliance with DO-178C/DO-331",
+      "Gained operational insight into pilot-in-the-loop behavior and the interplay between software, hardware, and human factors"
+    ]
+  },
+  {
+    "title": "Flight Control Systems Lab",
+    "slug": "fcsl",
+    "summary": "Acquired an in-depth understanding of aerospace development processes, avionics systems, and certification standards, with a particular focus on DO-178C and DO-331. The work concentrated on the functional implementation of flight control algorithms, evaluation of flight dynamics, and development of flight control software modules. Gained practical expertise in data transmission using the CAN-based ARINC825 standard and investigated the integration of redundant electromechanical actuators (EMAs) within modern flight control architectures. Implemented and tested flight control strategies for a demonstrator aircraft (DA-42 simulator) through both Processor-In-The-Loop (PIL) and Hardware-In-The-Loop (HIL) simulations. Additionally, developed strong analytical insight into the factors affecting flying and handling qualities, along with the ability to evaluate Pilot-In-The-Loop interactions from both theoretical and experimental perspectives.",
+    "stack": ["MIL", "HIL", "PIL", "MATLAB","DOORS", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
+    "highlights": [
+      "Built a full HIL testing environment for an Airships Avionic systems ",
+      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
+      "Successfully tested the Ground Control Station communications with the Airship"
+    ],
+    "links": {
+      "source": "https://www.fsd.ed.tum.de/teaching/pfr/"
+    },
+    "images": [
+      "/assets/projects/fcsl1.png",
+      "/assets/projects/fcsl2.png"
+    ],
+    "problem": [
+      "Develop and certify a flight control system according to aerospace safety standards",
+      "Ensure reliable communication and actuator redundancy in a realistic avionics environment",
+      "Understand and test the pilot’s interaction within the flight control loop"
+    ],
+    "approach": [
+      "Implemented flight-control algorithms in MATLAB/Simulink, then deployed them to a flight control computer",
+      "Established CAN-based communication via ARINC825 and integrated redundant EMAs",
+      "Conducted  Software, Hardware and Pilot-in-the-Loop simulations on the DA-42 aircraft simulator"
+    ],
+    "results": [
+      "Achieved stable closed-loop control performance under multiple flight scenarios",
+      "Validated functional safety and redundancy handling in compliance with DO-178C/DO-331",
+      "Gained operational insight into pilot-in-the-loop behavior and the interplay between software, hardware, and human factors"
     ]
   }
 ]
