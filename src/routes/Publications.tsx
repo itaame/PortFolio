@@ -24,7 +24,7 @@ export default function Publications() {
     <div className="space-y-12">
       <SEO title="Publications" description="Conference papers and articles covering mission control architectures and telemetry research." path="/publications" />
       <header className="space-y-4 text-center">
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Publications</h1>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Publications</h1>
 
       </header>
       <div className="grid gap-4 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900/80 sm:grid-cols-2">
