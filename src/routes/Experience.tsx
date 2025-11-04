@@ -14,18 +14,18 @@ export default function Experience() {
       <SEO title="Experience" description="Hands-on mission control, telemetry engineering, and research positions." path="/experience" />
       <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Experience</h1>
-          <p className="max-w-2xl text-sm text-slate-600 dark:text-slate-300">
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Experience</h1>
+          <p className="max-w-2xl text-sm text-slate-600 dark:text-slate-300 sm:text-base">
             Mission-ready engineering leadership, from analog mission control centers to embedded telemetry pipelines.
           </p>
         </div>
-        <Button asChild variant="secondary">
+        <Button asChild variant="secondary" className="w-full md:w-auto">
           <a href={resumeUrl} download>
             Download CV
           </a>
         </Button>
       </header>
-      <Timeline className="space-y-8 pl-6">
+      <Timeline className="space-y-8 pl-4 sm:pl-6">
         {timeline.map((item) => (
           <TimelineItem
             key={`${item.organization}-${item.role}`}

@@ -27,8 +27,8 @@ interface HeaderProps {
 export default function Header({ theme, onThemeChange, profile }: HeaderProps) {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-slate-200 bg-white/70 backdrop-blur dark:border-slate-800 dark:bg-slate-950/70">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-slate-200 bg-white/70 pt-[env(safe-area-inset-top)] backdrop-blur dark:border-slate-800 dark:bg-slate-950/70">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <NavLink to="/" className="flex items-center gap-3" aria-label="Go to home">
           <img
             src={profile.avatar}
@@ -61,7 +61,7 @@ export default function Header({ theme, onThemeChange, profile }: HeaderProps) {
             </NavLink>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle theme={theme} onChange={onThemeChange} />
           <button
             type="button"

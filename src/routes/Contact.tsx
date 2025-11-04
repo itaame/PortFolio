@@ -12,15 +12,15 @@ export default function Contact() {
         path="/contact"
       />
       <header className="space-y-5 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Let’s connect</h1>
-        <p className="mx-auto max-w-2xl text-base text-slate-600 dark:text-slate-300">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Let’s connect</h1>
+        <p className="mx-auto max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg">
           Whether you’re planning a mission rehearsal, telemetry pipeline, or a research partnership, I’m always happy to discuss
           how we can work together.
         </p>
       </header>
       <div className="space-y-8">
         <div className="grid gap-6 md:grid-cols-2">
-          <section className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white/95 via-white/90 to-slate-50/80 p-8 shadow-lg backdrop-blur-sm dark:border-slate-800 dark:from-slate-900/95 dark:via-slate-900/90 dark:to-slate-950/80">
+          <section className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white/95 via-white/90 to-slate-50/80 p-6 shadow-lg backdrop-blur-sm dark:border-slate-800 dark:from-slate-900/95 dark:via-slate-900/90 dark:to-slate-950/80 sm:p-8">
             <dl className="space-y-6">
               <div className="space-y-2">
                 <dt className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Location</dt>
@@ -40,7 +40,7 @@ export default function Contact() {
               </div>
             </dl>
           </section>
-          <section className="space-y-4 rounded-3xl border border-slate-200 bg-white p-8 shadow-soft dark:border-slate-800 dark:bg-slate-900">
+          <section className="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900 sm:p-8">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Social channels</h2>
             <div className="flex flex-col gap-3">
               {socials.map((social) => (

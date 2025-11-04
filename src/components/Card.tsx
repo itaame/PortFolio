@@ -39,7 +39,7 @@ export default function Card({
   );
 
   const baseClass = cn(
-    'flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-soft transition dark:border-slate-800 dark:bg-slate-900',
+    'flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-soft transition dark:border-slate-800 dark:bg-slate-900 sm:p-6',
     href && 'hover:-translate-y-1 hover:border-accent hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
     className
   );

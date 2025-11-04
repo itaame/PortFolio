@@ -50,18 +50,18 @@ export default function Home() {
       <section className="grid gap-10 lg:grid-cols-[1.2fr,1fr] lg:items-center">
         <div className="space-y-6">
           <Tag variant="accent">Short Profile</Tag>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
             {profile.name}
           </h1>
-          <p className="text-lg text-slate-600 dark:text-slate-300">{profile.summary}</p>
-          <div className="flex flex-wrap gap-3">
-            <Button asChild>
+          <p className="text-base text-slate-600 dark:text-slate-300 sm:text-lg">{profile.summary}</p>
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button asChild className="w-full sm:w-auto">
               <Link to="/projects">View Projects</Link>
             </Button>
-            <Button asChild variant="secondary">
+            <Button asChild variant="secondary" className="w-full sm:w-auto">
               <Link to="/contact">Contact Me</Link>
             </Button>
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="w-full sm:w-auto">
               <a href={resumeUrl} target="_blank" rel="noreferrer">
                 Download CV
               </a>
@@ -93,7 +93,7 @@ export default function Home() {
           </dl>
         </div>
         <div className="relative flex items-center justify-center">
-          <div className="relative h-64 w-64 overflow-hidden rounded-3xl border-4 border-white shadow-2xl ring-4 ring-accent/20 dark:border-slate-900">
+          <div className="relative h-56 w-56 max-w-full overflow-hidden rounded-3xl border-4 border-white shadow-2xl ring-4 ring-accent/20 dark:border-slate-900 sm:h-64 sm:w-64">
             <img
               src={avatarSrc}
               alt={`${profile.name} portrait`}
@@ -106,11 +106,13 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="skills-title" className="space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <h2 id="skills-title" className="text-2xl font-semibold text-slate-900 dark:text-white">
             Core capabilities
           </h2>
-          <span className="text-sm text-slate-500 dark:text-slate-400">Rapid to adapt, built for mission tempo</span>
+          <span className="text-sm text-slate-500 dark:text-slate-400 sm:text-right">
+            Rapid to adapt, built for mission tempo
+          </span>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => {
@@ -147,11 +149,14 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="featured-title" className="space-y-8">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <h2 id="featured-title" className="text-2xl font-semibold text-slate-900 dark:text-white">
             Featured missions
           </h2>
-          <Link to="/projects" className="text-sm font-semibold text-accent hover:text-accent/80">
+          <Link
+            to="/projects"
+            className="text-sm font-semibold text-accent hover:text-accent/80 sm:text-right"
+          >
             Explore all projects →
           </Link>
         </div>

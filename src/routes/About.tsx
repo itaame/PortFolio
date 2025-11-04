@@ -172,7 +172,7 @@ export default function About() {
       </section>
 
       <section aria-labelledby="trajectory-title" className="space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 id="trajectory-title" className="text-2xl font-semibold text-slate-900 dark:text-white">
               Recent trajectory snapshot
@@ -181,11 +181,11 @@ export default function About() {
               Highlights from the latest roles that shaped my approach to flight operations.
             </p>
           </div>
-          <Link to="/experience" className="text-sm font-semibold text-accent hover:text-accent/80">
+          <Link to="/experience" className="text-sm font-semibold text-accent hover:text-accent/80 sm:text-right">
             View full experience →
           </Link>
         </div>
-        <Timeline className="space-y-8 pl-6">
+        <Timeline className="space-y-8 pl-4 sm:pl-6">
           {highlightedExperience.map((item) => (
             <TimelineItem
               key={`${item.organization}-${item.role}`}
