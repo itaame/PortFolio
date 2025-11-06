@@ -1,4 +1,5 @@
 import { Button } from './Form';
+import { withBase } from '../lib/withBase';
 
 type Theme = 'light' | 'dark';
 
@@ -9,8 +10,7 @@ interface ThemeToggleProps {
 
 export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
   const isDark = theme === 'dark';
-  const assetBase = import.meta.env.BASE_URL;
-  const iconSrc = `${assetBase}assets/icons/${isDark ? 'theme-dark' : 'theme-light'}.svg`;
+  const iconSrc = withBase(`assets/icons/${isDark ? 'theme-dark' : 'theme-light'}.svg`);
 
   return (
     <Button
