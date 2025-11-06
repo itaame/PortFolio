@@ -83,7 +83,9 @@ export default function Header({ theme, onThemeChange, profile }: HeaderProps) {
       </div>
       <div
         id="mobile-nav"
-        className={`${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'} grid overflow-hidden border-t border-slate-200 transition-all dark:border-slate-800 sm:hidden`}
+        className={`grid overflow-hidden transition-all sm:hidden ${
+          open ? 'grid-rows-[1fr] border-t border-slate-200 dark:border-slate-800' : 'grid-rows-[0fr]'
+        }`}
       >
         <div className="min-h-0 space-y-4 bg-white px-4 py-4 dark:bg-slate-950">
           {navItems.map((item) => (
