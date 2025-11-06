@@ -22,21 +22,12 @@ export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
       onClick={() => onChange(isDark ? 'light' : 'dark')}
       aria-pressed={isDark}
       aria-label={`Activate ${isDark ? 'light' : 'dark'} theme`}
-      className="group h-10 w-10 rounded-full border border-transparent hover:border-accent"
+      className="h-10 w-10 rounded-full border border-transparent text-slate-600 hover:border-accent dark:text-slate-300"
     >
-      <span
+      <Icon
+        className="h-5 w-5 text-slate-600 transition-colors group-hover:text-accent dark:text-slate-300"
         aria-hidden="true"
-        style={{
-          WebkitMaskImage: `url(${iconSrc})`,
-          maskImage: `url(${iconSrc})`,
-          WebkitMaskRepeat: 'no-repeat',
-          maskRepeat: 'no-repeat',
-          WebkitMaskSize: 'contain',
-          maskSize: 'contain',
-          WebkitMaskPosition: 'center',
-          maskPosition: 'center'
-        }}
-        className="h-5 w-5 bg-slate-600 transition-transform transition-colors group-hover:scale-110 group-hover:bg-accent dark:bg-slate-300 dark:group-hover:bg-accent"
+        focusable="false"
       />
     </Button>
   );
