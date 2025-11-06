@@ -1,3 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">Priority Telemetry Packets</title>
+  <desc id="desc">Dashboard comparing urgent and nominal packet latency.</desc>
+  <rect width="320" height="200" rx="24" fill="#111827" />
+  <rect x="24" y="32" width="272" height="40" rx="12" fill="#1f2937" />
+  <rect x="24" y="88" width="272" height="80" rx="18" fill="#1f2937" />
+  <path fill="#f97316" d="M48 104h48v40H48z" />
+  <path fill="#22d3ee" d="M112 104h72v40h-72z" />
+  <path fill="#6366f1" d="M200 104h72v40h-72z" />
+  <g fill="#cbd5f5" font-family="monospace" font-size="14">
+    <text x="36" y="58">APID 100</text>
+    <text x="36" y="146">1.2 s</text>
+    <text x="128" y="146">2.4 s</text>
+    <text x="216" y="146">4.0 s</text>
+  </g>
 </svg>

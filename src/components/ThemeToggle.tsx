@@ -1,10 +1,6 @@
 import { Button } from './Form';
 
 type Theme = 'light' | 'dark';
-const THEME_ICONS: Record<Theme, string> = {
-  light: '/assets/icons/theme-light.svg',
-  dark: '/assets/icons/theme-dark.svg'
-};
 
 interface ThemeToggleProps {
   theme: Theme;
@@ -13,7 +9,9 @@ interface ThemeToggleProps {
 
 export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
   const isDark = theme === 'dark';
-  const iconSrc = THEME_ICONS[theme];
+
+  // ✅ swapped: light → "Dark Theme", dark → "Light Theme"
+  const label = isDark ? 'Light Theme' : 'Dark Theme';
 
   return (
     <Button
@@ -22,14 +20,15 @@ export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
       onClick={() => onChange(isDark ? 'light' : 'dark')}
       aria-pressed={isDark}
       aria-label={`Activate ${isDark ? 'light' : 'dark'} theme`}
-      className="h-10 w-10 rounded-full border border-transparent text-slate-600 hover:border-accent dark:text-slate-300"
+      className="
+        h-10 w-24 rounded-full
+        border border-slate-400
+        text-slate-700 dark:text-slate-200
+        hover:border-accent
+        flex items-center justify-center text-xs
+      "
     >
-      <img
-        src={iconSrc}
-        alt=""
-        className="h-5 w-5 transition-transform"
-        aria-hidden="true"
-      />
+      {label}
     </Button>
   );
 }
