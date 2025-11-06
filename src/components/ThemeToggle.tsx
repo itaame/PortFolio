@@ -1,6 +1,7 @@
 import { ComponentPropsWithoutRef } from 'react';
 
 import { Button } from './Form';
+import { withBase } from '../lib/withBase';
 
 type IconProps = ComponentPropsWithoutRef<'svg'>;
 
@@ -50,7 +51,7 @@ interface ThemeToggleProps {
 
 export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
   const isDark = theme === 'dark';
-  const Icon = isDark ? ThemeDarkIcon : ThemeLightIcon;
+  const iconSrc = withBase(`assets/icons/${isDark ? 'theme-dark' : 'theme-light'}.svg`);
 
   return (
     <Button
