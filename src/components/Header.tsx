@@ -83,8 +83,11 @@ export default function Header({ theme, onThemeChange, profile }: HeaderProps) {
       </div>
       <div
         id="mobile-nav"
-        className={`grid overflow-hidden transition-all sm:hidden ${
-          open ? 'grid-rows-[1fr] border-t border-slate-200 dark:border-slate-800' : 'grid-rows-[0fr]'
+        aria-hidden={!open}
+        className={`overflow-hidden transition-[max-height,opacity] duration-300 sm:hidden ${
+          open
+            ? 'max-h-[80vh] opacity-100 border-t border-slate-200 dark:border-slate-800'
+            : 'max-h-0 opacity-0'
         }`}
       >
         <div className="min-h-0 space-y-4 bg-white px-4 py-4 dark:bg-slate-950">

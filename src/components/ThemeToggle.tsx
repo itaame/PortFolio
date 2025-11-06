@@ -9,6 +9,8 @@ interface ThemeToggleProps {
 
 export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
   const isDark = theme === 'dark';
+  const assetBase = import.meta.env.BASE_URL;
+  const iconSrc = `${assetBase}assets/icons/${isDark ? 'theme-dark' : 'theme-light'}.svg`;
 
   return (
     <Button
@@ -19,14 +21,7 @@ export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
       aria-label={`Activate ${isDark ? 'light' : 'dark'} theme`}
       className="h-10 w-10 rounded-full border border-transparent hover:border-accent"
     >
-      <img
-        src={isDark ? '/assets/icons/theme-dark.svg' : '/assets/icons/theme-light.svg'}
-        alt=""
-        className="h-5 w-5"
-        loading="lazy"
-        decoding="async"
-        aria-hidden="true"
-      />
+      <img src={iconSrc} alt="" className="h-5 w-5" loading="lazy" decoding="async" aria-hidden="true" />
     </Button>
   );
 }
