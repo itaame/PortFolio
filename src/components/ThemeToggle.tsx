@@ -24,10 +24,11 @@ export default function ThemeToggle({ theme, onChange }: ThemeToggleProps) {
       aria-label={`Activate ${isDark ? 'light' : 'dark'} theme`}
       className="h-10 w-10 rounded-full border border-transparent text-slate-600 hover:border-accent dark:text-slate-300"
     >
-      <Icon
-        className="h-5 w-5 text-slate-600 transition-colors group-hover:text-accent dark:text-slate-300"
+      <img
+        src={iconSrc}
+        alt=""
+        className="h-5 w-5 transition-transform"
         aria-hidden="true"
-        focusable="false"
       />
     </Button>
   );
