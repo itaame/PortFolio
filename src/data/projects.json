@@ -132,9 +132,9 @@
     "summary": "Developed the first prototype of a modular acquisition and control board, designed for flexibility and sensor scalability. The system supports up to nine including very low-voltage (35 mV–100 mV), 10–12 V, 0–5 V, and digital inputs. It also features control capability for four solenoid valves, operating in multiple modes (in-phase, opposite-phase, or mixed). Extensive breadboard simulations and validation tests confirmed full functionality and compliance with system requirements. Deliverables included the complete Altium project (schematic and PCB layout), Bill of Materials (BOM), and the embedded code for CAN communication and USB sensor interfacing.",
     "stack": ["Altium", "BOM", "CAN", "PCB"],
     "highlights": [
-      "Built a full HIL testing environment for an Airships Avionic systems ",
-      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
-      "Successfully tested the Ground Control Station communications with the Airship"
+      "Developed a modular avionics board enabling scalable sensor acquisition and actuator control for rocket propulsion systems",
+      "Implemented multi-mode solenoid valve control and CAN/USB communication firmware ensuring precise operation",
+      "Validated full system functionality through simulations and bench tests, delivering a reusable avionics platform for future missions"
     ],
     "links": {
       "source": "https://cnes.fr/projets/perseus"
@@ -165,9 +165,9 @@
     "summary": "Developed a comprehensive understanding of Flight Testing Techniques, with particular emphasis on Flight Performance, Stability, and Control. The work encompassed the full process of preparing, executing, and analysing flight tests in a controlled simulator environment. This included the study of operational requirements, aviation regulations, and the specific responsibilities of the flight test crew. Detailed Flight Test Cards (FTCs) were prepared for each exercise, accompanied by the setup and use of flight test instrumentation and data acquisition systems. During a two-hour demonstration flight using a DA-42 simulator, twelve distinct test procedures were executed — including take-off performance, phugoid motion, and Dutch roll assessments. The campaign concluded with in-depth analysis and interpretation of flight test data, resulting in a strong technical foundation in both theoretical and applied flight testing.",
     "stack": ["HIL", "UDP", "MATLAB", "RS232", "RS485", "CAN", "A429", "RocksDB"],
     "highlights": [
-      "Built a full HIL testing environment for an Airships Avionic systems ",
-      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
-      "Successfully tested the Ground Control Station communications with the Airship"
+      "Executed a complete experimental flight test campaign on a DA-42 simulator, covering 12 performance and stability test cases",
+      "Prepared professional Flight Test Cards and configured flight instrumentation in accordance with aviation standards",
+      "Analyzed acquired flight data to validate aerodynamic models and assess aircraft handling qualities"
     ],
     "links": {
       "source": "https://www.fsd.ed.tum.de/teaching/pfvt/"
@@ -198,42 +198,9 @@
     "summary": "Acquired an in-depth understanding of aerospace development processes, avionics systems, and certification standards, with a particular focus on DO-178C and DO-331. The work concentrated on the functional implementation of flight control algorithms, evaluation of flight dynamics, and development of flight control software modules. Gained practical expertise in data transmission using the CAN-based ARINC825 standard and investigated the integration of redundant electromechanical actuators (EMAs) within modern flight control architectures. Implemented and tested flight control strategies for a demonstrator aircraft (DA-42 simulator) through both Processor-In-The-Loop (PIL) and Hardware-In-The-Loop (HIL) simulations. Additionally, developed strong analytical insight into the factors affecting flying and handling qualities, along with the ability to evaluate Pilot-In-The-Loop interactions from both theoretical and experimental perspectives.",
     "stack": ["MIL", "HIL", "PIL", "MATLAB","DOORS", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
     "highlights": [
-      "Built a full HIL testing environment for an Airships Avionic systems ",
-      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
-      "Successfully tested the Ground Control Station communications with the Airship"
-    ],
-    "links": {
-      "source": "https://www.fsd.ed.tum.de/teaching/pfr/"
-    },
-    "images": [
-      "/assets/projects/fcsl1.png",
-      "/assets/projects/fcsl2.png"
-    ],
-    "problem": [
-      "Develop and certify a flight control system according to aerospace safety standards",
-      "Ensure reliable communication and actuator redundancy in a realistic avionics environment",
-      "Understand and test the pilot’s interaction within the flight control loop"
-    ],
-    "approach": [
-      "Implemented flight-control algorithms in MATLAB/Simulink, then deployed them to a flight control computer",
-      "Established CAN-based communication via ARINC825 and integrated redundant EMAs",
-      "Conducted  Software, Hardware and Pilot-in-the-Loop simulations on the DA-42 aircraft simulator"
-    ],
-    "results": [
-      "Achieved stable closed-loop control performance under multiple flight scenarios",
-      "Validated functional safety and redundancy handling in compliance with DO-178C/DO-331",
-      "Gained operational insight into pilot-in-the-loop behavior and the interplay between software, hardware, and human factors"
-    ]
-  },
-  {
-    "title": "Flight Control Systems Lab",
-    "slug": "fcsl",
-    "summary": "Acquired an in-depth understanding of aerospace development processes, avionics systems, and certification standards, with a particular focus on DO-178C and DO-331. The work concentrated on the functional implementation of flight control algorithms, evaluation of flight dynamics, and development of flight control software modules. Gained practical expertise in data transmission using the CAN-based ARINC825 standard and investigated the integration of redundant electromechanical actuators (EMAs) within modern flight control architectures. Implemented and tested flight control strategies for a demonstrator aircraft (DA-42 simulator) through both Processor-In-The-Loop (PIL) and Hardware-In-The-Loop (HIL) simulations. Additionally, developed strong analytical insight into the factors affecting flying and handling qualities, along with the ability to evaluate Pilot-In-The-Loop interactions from both theoretical and experimental perspectives.",
-    "stack": ["MIL", "HIL", "PIL", "MATLAB","DOORS", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
-    "highlights": [
-      "Built a full HIL testing environment for an Airships Avionic systems ",
-      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
-      "Successfully tested the Ground Control Station communications with the Airship"
+      "Implemented and tested DO-178C/DO-331-compliant flight control algorithms on a DA-42 simulator using PIL and HIL methods",
+      "Integrated redundant electromechanical actuators and ARINC825-based CAN communication for reliable control performance",
+      "Validated closed-loop stability and pilot-in-the-loop behavior across multiple flight scenarios"
     ],
     "links": {
       "source": "https://www.fsd.ed.tum.de/teaching/pfr/"

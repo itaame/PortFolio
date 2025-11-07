@@ -53,12 +53,10 @@ export default function About() {
         <div className="grid gap-8 lg:grid-cols-[1.6fr,1fr] lg:items-center">
           <div className="space-y-4">
             <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-              Meet Ilyasse Taame
+              Meet me
             </h1>
             <p className="max-w-3xl text-base text-slate-600 dark:text-slate-300">
-              Spacecraft operations enthusiast with a dual-degree M.Sc. focused on avionics and human spaceflight, fascinated by how
-              disciplined procedures and resilient software keep crews safe. I thrive in real-time environments where telemetry, human
-              factors, and mission objectives intersect.
+            Hi, I’m Ilyasse Taame, a 24 years old space and aviation enthusiast. The rest of this portfolio highlights my academic and professional journey, but I wanted to dedicate this page to something more personal. Here, I’d like to share a glimpse of who I am beyond the consoles and code: my personal background, what first sparked my love for space and flight, and the passions that continue to inspire me today.
             </p>
           </div>
           <figure className="relative mx-auto max-w-xs overflow-hidden rounded-3xl border border-slate-200 shadow-soft dark:border-slate-700">
@@ -76,9 +74,8 @@ export default function About() {
       <section className="grid gap-10 lg:grid-cols-[1.4fr,1fr] lg:items-start">
         <div className="space-y-4 text-base text-slate-600 dark:text-slate-300">
           <p>
-            My journey spans mission control centers, embedded avionics labs, and zero-g flight campaigns. Whether coordinating with
-            multidisciplinary teams as Head of MCC during ASCLEPIOS or architecting telemetry pipelines for life-support systems, I focus on
-            clarity under pressure and data that operators can trust.
+          Born in Casablanca, Morocco, the light pollution of such a vast city made it nearly impossible to see the beautiful stars I admired in my favorite documentaries — the ones about space.
+To chase those stars and the dreams they inspired, I developed a deep sense of escapism. Airplanes, in particular, fascinated me — they could navigate anywhere, crossing the very frontiers that once felt so limiting.
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
             <img
@@ -88,28 +85,11 @@ export default function About() {
               className="h-60 w-full object-cover"
             />
             <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
-              A favorite mission control vantage point where telemetry, voice loops, and team coordination intersect.
+              The moment I realized that looking up at the sky wasn’t enough, I wanted to fly through it.
             </figcaption>
           </figure>
           <p>
-            I’m equally at home writing procedures as building the tools that execute them. From XTCE modelling and CCSDS packet routing to
-            developing voice-loop software with openVoCS logic, I enjoy translating complex requirements into systems that feel intuitive to the
-            people who rely on them in critical moments.
-          </p>
-          <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
-            <img
-              src={withBase('assets/projects/about2.JPG')}
-              alt="Mission control consoles with glowing telemetry displays"
-              loading="lazy"
-              className="h-60 w-full object-cover"
-            />
-            <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
-              A favorite mission control vantage point where telemetry, voice loops, and team coordination intersect.
-            </figcaption>
-          </figure>
-          <p>
-            Outside the control room you can find me iterating on flight experiments, practicing languages to connect with global crews, or
-            mentoring students entering the space-operations world. Curiosity and rigorous preparation are the constants that keep me mission-ready.
+            My journey to reach those dreams eventually led me to study in France and Germany. Amid visa challenges and societal expectations, I had to navigate the complex terrain of studying abroad — often questioning belonging and worthiness. Yet, within this path, I found myself part of a small but passionate community of young space enthusiasts across Europe, traveling to Paris, Milan, and Cologne, and for once, not worrying about the borders that used to hold me back.
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
             <img
@@ -119,7 +99,31 @@ export default function About() {
               className="h-56 w-full object-cover"
             />
             <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
-              High-altitude campaigns remind me that curiosity and preparation fuel every successful mission.
+              Before exploring space, I love exploring planet Earth — hiking in the Swiss Alps, the Pyrenees, and the Bavarian mountains, enjoying nature and the serenity of clear, starry night skies.
+            </figcaption>
+          </figure>
+          <p>
+            Another passion of mine is digital and analog photography. I love capturing people, animals, or even statues —
+            making them the center of a story told through a single frame.
+            A glimpse of my work is available in my{" "}
+            <a
+              href="https://vsco.co/llyass/gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              gallery
+            </a>.
+          </p>
+          <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
+            <img
+              src={withBase('assets/projects/about2.JPG')}
+              alt="Mission control consoles with glowing telemetry displays"
+              loading="lazy"
+              className="h-60 w-full object-cover"
+            />
+            <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
+              Sometimes the lens turns the other way, capturing not the stars, but the journey toward them — a glimpse from the ASCLEPIOS analog mission.
             </figcaption>
           </figure>
         </div>
