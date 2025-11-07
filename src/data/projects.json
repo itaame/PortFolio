@@ -1,43 +1,41 @@
 [
   {
-    "title": "Voice Loops Communication Software",
-    "slug": "analog-mission-mcc-voice-loops",
-    "summary": "Modelled after the voice loop structure used in the Columbus Control Centre and in flight control centres around the world, this software allows users to listen in to up to three voice loops simultaneously. Volume can be adjusted on each loop, and they can each be toggled while speaking. Certain loops have restricted permissions to comply with operational procedures - for example, all flight controllers can listen into the Space to Ground loop, but only the CapCom, Flight Director, and astronauts in the base can speak in this loop. This new software both improved realism to match industry standards and simplified Asclepios MCC communications. Additionally, the MCC communications software implemented an artificial six-second round-trip communications delay to simulate the latency in communications between the Moon and the Earth. While this has been done previously in NASA or ESA-led analogue projects such as NEEMO and PANGAEA-X/Analog-1, Asclepios is the first non-space-agency analogue mission to implement it.",
-    "stack": ["Python", "PyMumble", "Flask", "HTML"],
+    "title": "Hardware-In-The-Loop Simulation Environment for the Avionics Systems of an Airship",
+    "slug": "airship",
+    "summary": "A HiL Simulation Environment for the avionic systems of the Airbus Urban Mobility Airship using the TechSat ADS2 HiL PC was setup. The ADS2 was interfaced with a Visualization PC using the internal TCP-UDP I/O Device where a UDP message containing the Aircraft state according to the flight dynamic model is sent to Microsoft Flight Simulator. Thanks to this environment, a successful HiL Test of the Ground Control Station communications with the Airship was conducted",
+    "stack": ["HIL", "UDP", "MATLAB & Simulink", "RS232", "RS485", "CAN", "A429", "RocksDB", "DOORS"],
     "highlights": [
-      "Enabled Voice Loop Communication between Flight Controllers and Analog Crew",
-      "Enabled artificial voice delay",
-      "Increased situational awareness inside the MCC"
+      "Built a full HIL testing environment for an Airships Avionic systems ",
+      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
+      "Successfully tested the Ground Control Station communications with the Airship"
     ],
     "links": {
-      "github": "https://github.com/itaame/MC-COMMS3"
+      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
     },
     "images": [
-      "/assets/projects/mcc-voice-loops3.JPEG",
-      "/assets/projects/mcc-voice-loops5.jpg",
-      "/assets/projects/mcc-voice-loops6.PNG",
-      "/assets/projects/mcc-voice-loops.png"
+      "/assets/projects/airship1.jpeg",
+      "/assets/projects/NDA.jpeg"
     ],
     "problem": [
-      "Analog astronaut crews and Flight Controllers needed low-latency communications",
-      "Operators were required to listen to multiple channels",
-      "The mission required the implementation of artificial voice delay"
+      "Develop a test and validation framework for the avionic systems of the Airbus Urban Mobility Airship",
+      "Ensure realistic flight-dynamics visualization and reliable communication interfaces"
     ],
     "approach": [
-      "Studied the voice communication system in Col-CC and around the world",
-      "Built Flask-based voice loop router with PyMumble client orchestration"
+      "Designed and implemented a Hardware-in-the-Loop (HiL) simulation environment using the TechSat ADS2 HiL PC",
+      "Interfaced the ADS2 with a Visualization PC running Microsoft Flight Simulator, exchanging aircraft-state data via UDP according to the flight dynamic model",
+      "Configured internal I/O devices to simulate communication links between avionics and the GCS"
     ],
     "results": [
-      "Increased Flight Controller's situational awareness",
-      "Enabled Artificial voice delay",
-      "Nominally deployed in the ASCLEPIOS V and WBA Spartan Space analog space missions"
+      "Successfully validated end-to-end communication between the Ground Control Station and the Airship avionics in a real-time HiL setup",
+      "Achieved synchronized visualization of dynamic flight behavior in MSFS",
+      "Provided a functional HiL testbed architecture ready for integration and future development of autonomous airship control systems"
     ]
   },
   {
     "title": "Real-Time Flight-Ops GUI",
     "slug": "real-time-gui",
     "summary": "Magnetohydrodynamic Vortex‑Inducing Photobioreactor Experiment (MVIPER) tests a novel way to mix and de‑gas algal photobioreactors in weightlessness. Instead of pumps and membranes, it uses a magnetohydrodynamic (MHD) drive: electrodes impose an electric field through a conductive growth medium while permanent magnets supply a perpendicular magnetic field. The resulting Lorentz force spins the liquid into a vortex that should drive liquid outward and force gas bubbles inward for easy separation, potentially making future life‑support bioreactors simpler, lighter, and more reliable in space. The experiment was tested during the 87ᵗʰ ESA–Novespace parabolic‑flight campaign in September 2025. The GUI fuses 15 sensor channels telemetry, live video feed, and live g-level classification into a single dashboard used on the A310 Novespace Zero-G aircraft.",
-    "stack": ["Teensy 4.1", "C/C++", "Python", "CCSDS", "RocksDB", "YAMCS"],
+    "stack": ["Teensy 4.1", "C/C++", "Python", "CCSDS", "RocksDB", "Git", "TT&C"],
     "highlights": [
       "Sustained 10 kHz sampling across multi-sensor buses",
       "Generated CRC16-wrapped frames with lossless buffering",
@@ -68,7 +66,7 @@
     "title": "YAMCS based Monitoring and Control System (MCS) Software",
     "slug": "mcs",
     "summary": "In order to align with industry standards, this MCS was build using Space Application's open source software YAMCS. This all in one tool enables Flight Planning, reception and decoding of CCSDS Space Packet Protocol, following a mission specific MIB that follows the CCSDS XTCE Protocol. The Software is an easy to use Web based tool that allows Flight Controllers to view and edit the Flight Plan, monitor critical ECLSS and Biomedical data, and conduct real-time trend analysis. The software also allows the Flight Control Team to send commands, log events, and local data storage.",
-    "stack": ["CCSDS", "ECSS", "YAMCS", "yaml", "Python"],
+    "stack": ["CCSDS", "ECSS", "YAMCS", "yaml", "Python", "TT&C"],
     "highlights": [
       "Build a Monitoring and Control System aligned with industry standards",
       "Enabled efficient flight Planing",
@@ -95,42 +93,44 @@
     ]
   },
   {
-    "title": "Hardware-In-The-Loop Simulation Environment for the Avionics Systems of an Airship",
-    "slug": "airship",
-    "summary": "A HiL Simulation Environment for the avionic systems of the Airbus Urban Mobility Airship using the TechSat ADS2 HiL PC was setup. The ADS2 was interfaced with a Visualization PC using the internal TCP-UDP I/O Device where a UDP message containing the Aircraft state according to the flight dynamic model is sent to Microsoft Flight Simulator. Thanks to this environment, a successful HiL Test of the Ground Control Station communications with the Airship was conducted",
-    "stack": ["HIL", "UDP", "MATLAB", "RS232", "RS485", "CAN", "A429", "RocksDB"],
+    "title": "Voice Loops Communication Software",
+    "slug": "analog-mission-mcc-voice-loops",
+    "summary": "Modelled after the voice loop structure used in the Columbus Control Centre and in flight control centres around the world, this software allows users to listen in to up to three voice loops simultaneously. Volume can be adjusted on each loop, and they can each be toggled while speaking. Certain loops have restricted permissions to comply with operational procedures - for example, all flight controllers can listen into the Space to Ground loop, but only the CapCom, Flight Director, and astronauts in the base can speak in this loop. This new software both improved realism to match industry standards and simplified Asclepios MCC communications. Additionally, the MCC communications software implemented an artificial six-second round-trip communications delay to simulate the latency in communications between the Moon and the Earth. While this has been done previously in NASA or ESA-led analogue projects such as NEEMO and PANGAEA-X/Analog-1, Asclepios is the first non-space-agency analogue mission to implement it.",
+    "stack": ["Python", "PyMumble", "Flask", "HTML", "Linux", "Git"],
     "highlights": [
-      "Built a full HIL testing environment for an Airships Avionic systems ",
-      "Enabled live visualisation off the Aircraft's state using Microsoft Flight Simulator",
-      "Successfully tested the Ground Control Station communications with the Airship"
+      "Enabled Voice Loop Communication between Flight Controllers and Analog Crew",
+      "Enabled artificial voice delay",
+      "Increased situational awareness inside the MCC"
     ],
     "links": {
-      "source": "https://space-solutions.airbus.com/imagery/3d-elevation-and-reference-points/3d-mapping/"
+      "github": "https://github.com/itaame/MC-COMMS3"
     },
     "images": [
-      "/assets/projects/airship1.jpeg",
-      "/assets/projects/NDA.jpeg"
+      "/assets/projects/mcc-voice-loops3.JPEG",
+      "/assets/projects/mcc-voice-loops5.jpg",
+      "/assets/projects/mcc-voice-loops6.PNG",
+      "/assets/projects/mcc-voice-loops.png"
     ],
     "problem": [
-      "Develop a test and validation framework for the avionic systems of the Airbus Urban Mobility Airship",
-      "Ensure realistic flight-dynamics visualization and reliable communication interfaces"
+      "Analog astronaut crews and Flight Controllers needed low-latency communications",
+      "Operators were required to listen to multiple channels",
+      "The mission required the implementation of artificial voice delay"
     ],
     "approach": [
-      "Designed and implemented a Hardware-in-the-Loop (HiL) simulation environment using the TechSat ADS2 HiL PC",
-      "Interfaced the ADS2 with a Visualization PC running Microsoft Flight Simulator, exchanging aircraft-state data via UDP according to the flight dynamic model",
-      "Configured internal I/O devices to simulate communication links between avionics and the GCS"
+      "Studied the voice communication system in Col-CC and around the world",
+      "Built Flask-based voice loop router with PyMumble client orchestration"
     ],
     "results": [
-      "Successfully validated end-to-end communication between the Ground Control Station and the Airship avionics in a real-time HiL setup",
-      "Achieved synchronized visualization of dynamic flight behavior in MSFS",
-      "Provided a functional HiL testbed architecture ready for integration and future development of autonomous airship control systems"
+      "Increased Flight Controller's situational awareness",
+      "Enabled Artificial voice delay",
+      "Nominally deployed in the ASCLEPIOS V and WBA Spartan Space analog space missions"
     ]
   },
   {
     "title": "Avionics systems for propulsion and control in sounding rockets",
     "slug": "cnes",
     "summary": "Developed the first prototype of a modular acquisition and control board, designed for flexibility and sensor scalability. The system supports up to nine including very low-voltage (35 mV–100 mV), 10–12 V, 0–5 V, and digital inputs. It also features control capability for four solenoid valves, operating in multiple modes (in-phase, opposite-phase, or mixed). Extensive breadboard simulations and validation tests confirmed full functionality and compliance with system requirements. Deliverables included the complete Altium project (schematic and PCB layout), Bill of Materials (BOM), and the embedded code for CAN communication and USB sensor interfacing.",
-    "stack": ["Altium", "BOM", "CAN", "PCB"],
+    "stack": ["Altium Designer", "Proteus", "BOM", "CAN", "PCB", "C/C++", "EMC"],
     "highlights": [
       "Developed a modular avionics board enabling scalable sensor acquisition and actuator control for rocket propulsion systems",
       "Implemented multi-mode solenoid valve control and CAN/USB communication firmware ensuring precise operation",
@@ -163,7 +163,7 @@
     "title": "Flight Testing Lab",
     "slug": "ftl",
     "summary": "Developed a comprehensive understanding of Flight Testing Techniques, with particular emphasis on Flight Performance, Stability, and Control. The work encompassed the full process of preparing, executing, and analysing flight tests in a controlled simulator environment. This included the study of operational requirements, aviation regulations, and the specific responsibilities of the flight test crew. Detailed Flight Test Cards (FTCs) were prepared for each exercise, accompanied by the setup and use of flight test instrumentation and data acquisition systems. During a two-hour demonstration flight using a DA-42 simulator, twelve distinct test procedures were executed — including take-off performance, phugoid motion, and Dutch roll assessments. The campaign concluded with in-depth analysis and interpretation of flight test data, resulting in a strong technical foundation in both theoretical and applied flight testing.",
-    "stack": ["HIL", "UDP", "MATLAB", "RS232", "RS485", "CAN", "A429", "RocksDB"],
+    "stack": ["HIL", "UDP", "MATLAB & Simulink", "RS232", "RS485", "CAN", "A429", "RocksDB"],
     "highlights": [
       "Executed a complete experimental flight test campaign on a DA-42 simulator, covering 12 performance and stability test cases",
       "Prepared professional Flight Test Cards and configured flight instrumentation in accordance with aviation standards",
@@ -196,7 +196,7 @@
     "title": "Flight Control Systems Lab",
     "slug": "fcsl",
     "summary": "Acquired an in-depth understanding of aerospace development processes, avionics systems, and certification standards, with a particular focus on DO-178C and DO-331. The work concentrated on the functional implementation of flight control algorithms, evaluation of flight dynamics, and development of flight control software modules. Gained practical expertise in data transmission using the CAN-based ARINC825 standard and investigated the integration of redundant electromechanical actuators (EMAs) within modern flight control architectures. Implemented and tested flight control strategies for a demonstrator aircraft (DA-42 simulator) through both Processor-In-The-Loop (PIL) and Hardware-In-The-Loop (HIL) simulations. Additionally, developed strong analytical insight into the factors affecting flying and handling qualities, along with the ability to evaluate Pilot-In-The-Loop interactions from both theoretical and experimental perspectives.",
-    "stack": ["MIL", "HIL", "PIL", "MATLAB","DOORS", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
+    "stack": ["SIL", "HIL", "PIL", "MATLAB & Simulink","Polarion", "FMAE", "EMA", "DO-178C", "DO-331", "CAN", "ARINC825"],
     "highlights": [
       "Implemented and tested DO-178C/DO-331-compliant flight control algorithms on a DA-42 simulator using PIL and HIL methods",
       "Integrated redundant electromechanical actuators and ARINC825-based CAN communication for reliable control performance",

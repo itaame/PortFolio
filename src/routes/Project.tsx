@@ -33,7 +33,7 @@ export default function Project() {
         image={imageSources[0]}
       />
       <header className="space-y-4">
-        <Tag variant="accent">Case Study</Tag>
+        <Tag variant="accent">project overview</Tag>
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white">{project.title}</h1>
         <p className="text-sm text-slate-600 dark:text-slate-300">{project.summary}</p>
         <div className="flex flex-wrap gap-2">

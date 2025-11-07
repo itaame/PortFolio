@@ -111,7 +111,7 @@ export default function Home() {
             Core capabilities
           </h2>
           <span className="text-sm text-slate-500 dark:text-slate-400 sm:text-right">
-            Rapid to adapt, built for mission tempo
+            Rapid to adapt, built for high mission tempo
           </span>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

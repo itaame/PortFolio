@@ -1,12 +1,13 @@
 [
   "Python",
   "C/C++",
+  "MATLAB & Simulink",
   "CCSDS",
   "ECSS",
+  "TT&C",
   "YAMCS",
   "GMV tools (EFN, GCACK, CLOG)",
-  "TT&C",
-  "Mission Control",
+  "Flight/Ground Control",
   "Git",
   "Linux",
   "Catia V5",
@@ -14,7 +15,6 @@
   "Altium Designer",
   "KiCad",
   "Proteus",
-  "MATLAB & Simulink",
   "Cameo SysML",
   "DOORS",
   "Polarion"

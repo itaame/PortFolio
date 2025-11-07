@@ -26,10 +26,7 @@ export default function Projects() {
     <div className="space-y-12">
       <SEO title="Projects" description="Mission control software, telemetry pipelines, and real-time monitoring systems." path="/projects" />
       <header className="space-y-4 text-center">
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Projects & Case Studies</h1>
-        <p className="mx-auto max-w-2xl text-sm text-slate-600 dark:text-slate-300 sm:text-base">
-          Each project accelerates mission tempo with data-driven telemetry, resilient communications, and operator-centered tooling.
-        </p>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Projects</h1>
         {skillFilter && (
           <div className="mx-auto flex max-w-md items-center justify-center gap-3 rounded-full border border-accent/30 bg-accent/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent">
             <span>Filtering by skill: {skillFilter}</span>

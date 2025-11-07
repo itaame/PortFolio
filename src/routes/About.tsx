@@ -18,13 +18,13 @@ const focusAreas = [
   {
     title: 'Telemetry & data pipelines',
     description:
-      'Designs low-latency CCSDS-compliant telemetry systems, merging life-support housekeeping with wearable biometrics for clear, actionable dashboards.',
+      'Designed low-latency CCSDS-compliant telemetry systems, merging life-support housekeeping with wearable biometrics for clear, actionable dashboards.',
     tags: ['CCSDS', 'XTCE', 'Real-time trending']
   },
   {
     title: 'Human spaceflight readiness',
     description:
-      'Blends avionics engineering with crewed mission procedures, from HiL simulations to zero-g flight campaigns and cross-functional anomaly response.',
+      'Blended avionics engineering with crewed mission procedures, from HiL simulations to zero-g flight campaigns and cross-functional anomaly response.',
     tags: ['Human spaceflight', 'HiL', 'Mission procedures']
   }
 ];
@@ -182,7 +182,7 @@ To chase those stars and the dreams they inspired, I developed a deep sense of e
               Recent trajectory snapshot
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Highlights from the latest roles that shaped my approach to flight operations.
+              Highlights from the latest roles that shaped my approach to avionics and flight operations.
             </p>
           </div>
           <Link to="/experience" className="text-sm font-semibold text-accent hover:text-accent/80 sm:text-right">
