@@ -74,8 +74,8 @@ export default function About() {
       <section className="grid gap-10 lg:grid-cols-[1.4fr,1fr] lg:items-start">
         <div className="space-y-4 text-base text-slate-600 dark:text-slate-300">
           <p>
-          Born in Casablanca, Morocco, the light pollution of such a vast city made it nearly impossible to see the beautiful stars I admired in my favorite documentaries — the ones about space.
-To chase those stars and the dreams they inspired, I developed a deep sense of escapism. Airplanes, in particular, fascinated me — they could navigate anywhere, crossing the very frontiers that once felt so limiting.
+          Born in Casablanca, Morocco, the light pollution of such a vast city made it nearly impossible to see the beautiful stars I admired in my favorite documentaries, the ones about space.
+To chase those stars and the dreams they inspired, I developed a deep sense of escapism. Airplanes, in particular, fascinated me. They could navigate anywhere, crossing the very frontiers that once felt so limiting.
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-soft dark:border-slate-800 dark:bg-slate-900/60">
             <img
@@ -89,7 +89,7 @@ To chase those stars and the dreams they inspired, I developed a deep sense of e
             </figcaption>
           </figure>
           <p>
-            My journey to reach those dreams eventually led me to study in France and Germany. Amid visa challenges and societal expectations, I had to navigate the complex terrain of studying abroad — often questioning belonging and worthiness. Yet, within this path, I found myself part of a small but passionate community of young space enthusiasts across Europe, traveling to Paris, Milan, and Cologne, and for once, not worrying about the borders that used to hold me back.
+            My journey to reach those dreams eventually led me to study in France and Germany. Amid visa challenges and societal expectations, I had to navigate the complex terrain of studying abroad, often questioning belonging and worthiness. Yet, within this path, I found myself part of a small but passionate community of young space enthusiasts across Europe, traveling to Paris, Milan, and Cologne, and for once, not worrying about the borders that used to hold me back.
           </p>
           <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
             <img
@@ -99,11 +99,11 @@ To chase those stars and the dreams they inspired, I developed a deep sense of e
               className="h-56 w-full object-cover"
             />
             <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
-              Before exploring space, I love exploring planet Earth — hiking in the Swiss Alps, the Pyrenees, and the Bavarian mountains, enjoying nature and the serenity of clear, starry night skies.
+              Before exploring space, I love exploring planet Earth, hiking in the Swiss Alps, the Pyrenees, and the Bavarian mountains, enjoying nature and the serenity of clear, starry night skies.
             </figcaption>
           </figure>
           <p>
-            Another passion of mine is digital and analog photography. I love capturing people, animals, or even statues —
+            Another passion of mine is digital and analog photography. I love capturing people, animals, or even statues,
             making them the center of a story told through a single frame.
             A glimpse of my work is available in my{" "}
             <a
@@ -123,7 +123,7 @@ To chase those stars and the dreams they inspired, I developed a deep sense of e
               className="h-60 w-full object-cover"
             />
             <figcaption className="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
-              Sometimes the lens turns the other way, capturing not the stars, but the journey toward them — a glimpse from the ASCLEPIOS analog mission.
+              Sometimes the lens turns the other way, capturing not the stars, but the journey toward them, a glimpse from the ASCLEPIOS analog mission.
             </figcaption>
           </figure>
         </div>
@@ -162,7 +162,7 @@ To chase those stars and the dreams they inspired, I developed a deep sense of e
       <section aria-labelledby="focus-title" className="space-y-8">
         <div className="space-y-2">
           <h2 id="focus-title" className="text-2xl font-semibold text-slate-900 dark:text-white">
-            How I deliver mission impact
+            How I deliver impact
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-300">
             I blend systems thinking with console discipline to keep missions resilient, observable, and human-centered.

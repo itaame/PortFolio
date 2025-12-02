@@ -6,6 +6,7 @@
     "start": "Feb 2025",
     "end": "Aug 2025",
     "achievements": [
+      "Designed the complete electronics architecture for the Environmental Control & Life Support Systems and wearable biomedical sensors of an analog mission, from trade-off analysis, component selection, interface definition, redundancy concepts, all the way to assembly, integration, and testing (AIT).",
       "Built a low-latency telemetry pipeline that ingests ECLSS housekeeping data and wearable biomedical streams into a flight controller’s dashboard, mirroring ISS-style console practice.",
       "The system, based on CCSDS Space Packet Protocol, achieved an overall PL < 1 %, 98.152 % of the 16-day mission time with zero-Loss, and an average latency of 21.24 ms."
     ]
@@ -17,27 +18,26 @@
     "start": "Jul 2024",
     "end": "Aug 2025",
     "achievements": [
-      "Led the design and deployment of mission control software using YAMCS, enhancing telemetry data handling and command stacks.",
-      "Ensured compliance with CCSDS protocols, improving operational efficiency and data integrity.",
-      "Managed critical data from ECLSS and biomedical sensors, supporting medical and science teams.",
-	"Developed voice-communication software implementing DLR’s Voice Communication Subsystem (openVoCS) loop logic for mission-control operations.",
-	"Developed comprehensive FOPs and protocols for mission control operations, ensuring high standards of performance."
+      "Architected the ground segment telemetry & telecommand system using YAMCS, including XTCE-based parameter databases, command dictionaries, TM/TC packet definitions, and interface control in alignment with ECSS/CCSDS standards.",
+      "Managed critical data from ECLSS and biomedical sensors, supporting medical and science teams. ",
+      "Developed voice-communication software implementing DLR’s Voice Communication Subsystem (openVoCS) loop logic for mission-control operations."
 
     ]
   },
   {
-    "role": "Embedded-Systems & GUI",
+    "role": "Avionic-Systems & GUI",
     "organization": "ESA Academy",
     "location": "Bordeaux, France",
     "start": "Jul 2025",
     "end": "Sep 2025",
     "achievements": [
+      "Performed AIT of the full avionics rack, including complete verification of sensor chains, power distribution units, fuses, EMI/EMC considerations, relay boards, and electro-mechanical actuators.",
       "Designed and built a real-time flight-ops GUI that fuses 15 sensor channels telemetry, FLIR video, and live g-level classification into a single dashboard used on the A310 Novespace Zero-G aircraft.",
       "Conducted flight-readiness tests and produced detailed test reports validating the system performance."
     ]
   },
   {
-    "role": "Semester Thesis",
+    "role": "Semester Thesis: HiL Simulation Environment for Avionic systems",
     "organization": "Institute of Flight System Dynamics - TUM",
     "location": "Garching, Germany",
     "start": "Jan 2024",
@@ -55,7 +55,8 @@
     "start": "May 2022",
     "end": "Aug 2022",
     "achievements": [
-      "Designed and validated avionics systems for propulsion and control in sounding rockets.",
+      "Designed and validated avionics PCB for acquisition and control in sounding rockets.",
+      "Performed bench validation ensuring full system compliance with performance and EMC standards.",
       "Developed connectivity between mission control and launch pad using MQTT protocol, contributing to the nominal launch of SERA IV rocket from Kiruna, Sweden."
     ]
   }

@@ -13,10 +13,6 @@ export default function Contact() {
       />
       <header className="space-y-5 text-center">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Let’s connect</h1>
-        <p className="mx-auto max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg">
-          Whether you’re planning a mission rehearsal, telemetry pipeline, or a research partnership, I’m always happy to discuss
-          how we can work together.
-        </p>
       </header>
       <div className="space-y-8">
         <div className="grid gap-6 md:grid-cols-2">
